@@ -1,21 +1,11 @@
 import React, { memo } from "react";
 
-const Panel = ({children, className}: {
+const Panel = ({children}: {
   children: any;
-  className?: string;
 }) => (
-  <div className={["panel", className].join(" ")}>
+  <h3 style={{fontWeight: 800, opacity: 0.8, color: "#fff"}}>
     {children}
-
-    <style jsx>{`
-      .panel {
-        background: #FFFFFF;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        font-size: 12px;
-      }
-    `}</style>
-  </div>
+  </h3>
 );
 
 export default memo(Panel);

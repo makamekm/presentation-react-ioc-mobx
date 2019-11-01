@@ -3,36 +3,89 @@ import {
   CodeSurferColumns,
   Step,
 } from "code-surfer";
+import "prismjs/components/prism-tsx";
 import { github, vsDark } from "@code-surfer/themes";
+export const theme = vsDark;
+import { Appear } from 'mdx-deck'
+
 import Panel from "./components/panel.tsx";
 import BigPanel from "./components/big-panel.tsx";
+import OnAppear from "./components/on-appear.tsx";
 
-export const theme = vsDark;
+<OnAppear fade>
 
-# NextJS, IOC, MOBX
+<Panel>
+  How to make applications faster?
+</Panel>
+
+<Appear>
+  <OnAppear fade>
+    # NextJS, IOC, MOBX
+  </OnAppear>
+</Appear>
+
+</OnAppear>
+
+---
+
+<OnAppear fade>
+
+<Panel>
+  What is the formula?
+</Panel>
 
 <BigPanel>
   React + NextJS + IOC + MOBX = Speed
 </BigPanel>
 
-**How to make applications faster**
+</OnAppear>
 
 ---
 
+<OnAppear fade>
+
 <Panel>
-  sdfsdfsdf
+  Alternatives?
 </Panel>
+
+<BigPanel>
+  React + NextJS + IOC + MOBX = Speed
+</BigPanel>
+
+</OnAppear>
+
+---
+
+<OnAppear fade>
+
+**Goal**
+
+## Make applications fast
+
+</OnAppear>
+
+---
+
+<OnAppear fade>
+
+<CodeSurfer>
+
+```tsx 1 subtitle="Import React" file=./components/panel.tsx
+```
+
+```tsx 10:17 subtitle="Use incapsulated styles" file=./components/panel.tsx
+```
+
+</CodeSurfer>
+
+</OnAppear>
+
+---
+
+<OnAppear fade>
 
 # Goal
 
 How to make applications fast?
 
----
-
-<CodeSurfer>
-
-```js file=./components/panel.tsx
-```
-
-</CodeSurfer>
-
+</OnAppear>
