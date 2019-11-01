@@ -1,0 +1,47 @@
+{
+  "name": "presentation-react-ioc-mobx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "__SRC__=index.mdx gatsby develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makamekm/presentation-react-ioc-mobx.git"
+  },
+  "author": "makame",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makamekm/presentation-react-ioc-mobx/issues"
+  },
+  "homepage": "https://github.com/makamekm/presentation-react-ioc-mobx#readme",
+  "devDependencies": {
+    "@types/debounce": "1.2.0",
+    "@types/node": "12.7.5",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.9.1",
+    "mdx-deck": "3.0.13",
+    "gatsby-plugin-typescript": "^2.1.15",
+    "gatsby-plugin-compile-es6-packages": "^2.0.0",
+    "gatsby-theme-mdx-deck": "^3.0.13",
+    "gatsby-plugin-styled-jsx": "3.1.12",
+    "tslint": "5.20.0",
+    "typescript": "3.6.3",
+    "execa": "3.2.0",
+    "meow": "5.0.0",
+    "fs-extra": "8.1.0",
+    "gatsby": "^2.13.24"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-decorators": "7.6.0",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "debounce": "1.2.0",
+    "mobx": "5.13.0",
+    "mobx-react": "6.1.3",
+    "react-ioc": "1.0.0",
+    "styled-jsx": "3.2.3"
+  }
+}
