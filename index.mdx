@@ -1,6 +1,11 @@
-import { themes } from 'mdx-deck'
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+import { github, vsDark } from "@code-surfer/themes";
 
-export const theme = themes.hack
+export const theme = vsDark;
 
 # NextJS, IOC, MOBX
 
@@ -17,6 +22,7 @@ export const theme = themes.hack
 **How to make applications faster**
 
 ---
+
 import Panel from "./components/panel.tsx";
 
 <Panel>
@@ -26,3 +32,13 @@ import Panel from "./components/panel.tsx";
 # Goal
 
 How to make applications fast?
+
+---
+
+<CodeSurfer>
+
+```js file=./components/panel.tsx
+```
+
+</CodeSurfer>
+
