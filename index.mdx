@@ -6,11 +6,22 @@ import {
 import "prismjs/components/prism-tsx";
 import { github, vsDark } from "@code-surfer/themes";
 export const theme = vsDark;
-import { Appear } from 'mdx-deck'
+import { Appear, Image } from 'mdx-deck'
 
 import Panel from "./components/panel.tsx";
 import BigPanel from "./components/big-panel.tsx";
+import BigBadge from "./components/big-badge.tsx";
 import OnAppear from "./components/on-appear.tsx";
+
+<OnAppear fade>
+
+# Prototyping | React
+
+by Karpov Maxim
+
+</OnAppear>
+
+---
 
 <OnAppear fade>
 
@@ -20,7 +31,11 @@ import OnAppear from "./components/on-appear.tsx";
 
 <Appear>
   <OnAppear fade>
-    # NextJS, IOC, MOBX
+    <div style={{textAlign: 'center'}}>
+      <BigPanel style={{display: 'inline-block'}}>
+        NextJS, IOC, MOBX
+      </BigPanel>
+    </div>
   </OnAppear>
 </Appear>
 
@@ -34,7 +49,7 @@ import OnAppear from "./components/on-appear.tsx";
   What is the formula?
 </Panel>
 
-<BigPanel>
+<BigPanel color="#2ECC71">
   React + NextJS + IOC + MOBX = Speed
 </BigPanel>
 
@@ -48,8 +63,67 @@ import OnAppear from "./components/on-appear.tsx";
   Alternatives?
 </Panel>
 
-<BigPanel>
-  React + NextJS + IOC + MOBX = Speed
+| Base | Alternative |
+| --- | --- |
+| <BigPanel color="#2ECC71">React</BigPanel> | <BigPanel>Vue</BigPanel> |
+| <BigPanel color="#2ECC71">NextJS + TS</BigPanel> | <BigPanel>Gatsby + Styled JSX + TS</BigPanel> |
+| <BigPanel color="#2ECC71">IOC + MobX</BigPanel> | <BigPanel>Redux Observable</BigPanel> |
+
+<style jsx global>{`
+  td, th {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    padding: 10px !important;
+  }
+
+  td {
+    border-right: 1px solid;
+  }
+
+  td:first-child {
+    border-left: 1px solid;
+  }
+`}</style>
+
+</OnAppear>
+
+---
+
+<OnAppear fade style={{minWidth: "90vw", minHeight: "90vh"}}>
+
+<BigBadge>
+  NextJS Homepage
+</BigBadge>
+
+<img src="nextjs-homepage.png" width="100%" height="100%" style={{objectFit: "contain", maxHeight: "100%" }}/>
+
+</OnAppear>
+
+---
+
+<OnAppear fade style={{minWidth: "90vw", minHeight: "90vh"}}>
+
+<BigBadge>
+  Gatsby Homepage
+</BigBadge>
+
+<img src="gatsby-homepage.png" width="100%" height="100%" style={{objectFit: "contain", maxHeight: "80%"}}/>
+
+</OnAppear>
+
+---
+
+<OnAppear fade>
+
+<h3>
+  Conclusion
+</h3>
+
+<BigPanel color="#2ECC71">
+  + NextJS is simple
+</BigPanel>
+
+<BigPanel style={{marginTop: "20px"}}>
+  - Gatsby is for everithing for large apps (All-in-One)
 </BigPanel>
 
 </OnAppear>

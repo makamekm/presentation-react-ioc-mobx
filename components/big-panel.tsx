@@ -1,13 +1,14 @@
 import React, { memo } from "react";
 
-const Panel = ({children, className, color}: {
+const Panel = ({children, className, color, style}: {
   children: any;
   className?: string;
   color?: string;
+  style?: React.CSSProperties;
 }) => {
   color = color || "tomato";
   return (
-    <div className={["panel", className].join(" ")}>
+    <div className={["panel", className].join(" ")} style={style}>
       {children}
 
       <style jsx>{`
