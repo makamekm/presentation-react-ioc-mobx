@@ -1,15 +1,73 @@
 import React, { memo } from "react";
+import Particles from "react-particles-js";
 
-const Panel = ({children, fade, style}: {
+const Panel = ({children, fade, style, particles, logo}: {
   children: any;
   fade?: boolean;
   style?: React.CSSProperties;
+  particles?: boolean;
+  logo?: boolean;
 }) => (
   <div
     style={style}
     className={"anime" + (fade ? " fade" : "") + (style && style.visibility === "hidden" ? " hidden" : "")}>
+    {particles
+      ? <div className="particles">
+        <Particles
+        params={{
+          particles: {
+            number: {
+              value: 50,
+              density: {
+                enable: false,
+              },
+            },
+            size: {
+              value: 3,
+              random: true,
+              anim: {
+                speed: 4,
+                size_min: 0.3,
+              },
+            },
+            line_linked: {
+              enable: false,
+            },
+            move: {
+              random: true,
+              speed: 1,
+              direction: "top",
+              out_mode: "out",
+            },
+          },
+        }}
+        style={{
+          width: "100%",
+          height: "100%",
+        }}/>
+      </div> : null}
     {children}
+    {logo ? <img src="logo.png" className="logo"/> : null}
     <style jsx>{`
+
+      .logo {
+        position: fixed;
+        pointer-events: none;
+        right: 10px;
+        bottom: -10px;
+        height: 70px;
+        object-fit: cover;
+      }
+
+      .particles {
+        position: fixed;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+      }
 
       .anime {
         transition: all 2s;
