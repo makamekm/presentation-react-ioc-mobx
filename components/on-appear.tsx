@@ -11,7 +11,7 @@ const Panel = ({children, fade, style, particles, logo}: {
   <div
     style={style}
     className={"anime" + (fade ? " fade" : "") + (style && style.visibility === "hidden" ? " hidden" : "")}>
-    {particles && false
+    {particles
       ? <div className="particles">
         <Particles
         params={{
@@ -48,6 +48,20 @@ const Panel = ({children, fade, style, particles, logo}: {
       </div> : null}
     {children}
     {logo ? <img src="logo.png" className="logo"/> : null}
+    <style global jsx>{`
+      td, th {
+        border-color: rgba(255, 255, 255, 0.4) !important;
+        padding: 10px !important;
+      }
+
+      td {
+        border-right: 1px solid;
+      }
+
+      td:first-child {
+        border-left: 1px solid;
+      }
+    `}</style>
     <style jsx>{`
 
       .logo {

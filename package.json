@@ -45,6 +45,7 @@
     "react-ioc": "1.0.0",
     "styled-jsx": "3.2.3",
     "code-surfer": "3.0.0-beta.1",
-    "react-particles-js": "2.7.0"
+    "react-particles-js": "2.7.0",
+    "curtainsjs": "4.0.4"
   }
 }
