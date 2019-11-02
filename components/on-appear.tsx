@@ -11,7 +11,7 @@ const Panel = ({children, fade, style, particles, logo}: {
   <div
     style={style}
     className={"anime" + (fade ? " fade" : "") + (style && style.visibility === "hidden" ? " hidden" : "")}>
-    {particles
+    {particles && false
       ? <div className="particles">
         <Particles
         params={{
@@ -70,6 +70,7 @@ const Panel = ({children, fade, style, particles, logo}: {
       }
 
       .anime {
+        opacity: 0;
         transition: all 2s;
       }
 
