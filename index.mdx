@@ -13,6 +13,7 @@ import Panel from "./components/panel.tsx";
 import BigPanel from "./components/big-panel.tsx";
 import BigBadge from "./components/big-badge.tsx";
 import OnAppear from "./components/on-appear.tsx";
+import Formula from "./components/formula.tsx";
 
 <OnAppear fade particles logo>
 
@@ -59,7 +60,7 @@ by Karpov Maxim
 <OnAppear fade particles logo>
 
 <BigBadge>
-  What is the main force?
+  What is the project speed?
 </BigBadge>
 
 </OnAppear>
@@ -73,6 +74,20 @@ by Karpov Maxim
 </BigBadge>
 
 <EffectImage src="friction.png"/>
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+<BigBadge>
+  Project Speed
+</BigBadge>
+
+<Formula style={{marginTop: "20px"}}>
+  V = (Ideas) / (Delta t) - underset(Friction)(F)
+</Formula>
 
 </OnAppear>
 
