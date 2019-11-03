@@ -77,7 +77,7 @@ export default class Hero extends React.Component<{
   public render() {
     return (
       <div>
-        <div className={"title" + (this.ready ? " show" : "")}>
+        <div className={"image-title" + (this.ready ? " show" : "")}>
           <BigBadge>
             {this.props.title}
           </BigBadge>
@@ -92,56 +92,56 @@ export default class Hero extends React.Component<{
             />
           </div>
           <div className={"canvas" + (this.ready ? " show" : "")} ref={(ref) => this.canvasContainer = ref} />
-          <style jsx>{`
-            .hero {
-              position: relative;
-              overflow: hidden;
-              display: flex;
-              justify-content: center;
-              width: auto;
-            }
-
-            .plane {
-              text-align: center;
-              width: auto;
-              height: auto;
-              max-width: 80vw;
-              max-height: 80vh;
-              content: '';
-            }
-
-            .img {
-              visibility: hidden;
-              width: auto;
-              height: auto;
-              max-width: 80vw;
-              max-height: 80vh;
-            }
-
-            .canvas {
-              opacity: 0;
-              position: absolute;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              left: 0;
-              transition: opacity 2s;
-            }
-
-            .canvas.show {
-              opacity: 1;
-            }
-
-            .title {
-              opacity: 0;
-              transition: opacity 2s;
-            }
-
-            .title.show {
-              opacity: 1;
-            }
-          `}</style>
         </div>
+        <style jsx>{`
+          .hero {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            width: auto;
+          }
+
+          .plane {
+            text-align: center;
+            width: auto;
+            height: auto;
+            max-width: 80vw;
+            max-height: 80vh;
+            content: '';
+          }
+
+          .img {
+            visibility: hidden;
+            width: auto;
+            height: auto;
+            max-width: 80vw;
+            max-height: 80vh;
+          }
+
+          .canvas {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transition: opacity 2s;
+          }
+
+          .canvas.show {
+            opacity: 1;
+          }
+
+          .image-title {
+            opacity: 0;
+            transition: opacity 2s;
+          }
+
+          .image-title.show {
+            opacity: 1;
+          }
+        `}</style>
       </div>
     );
   }
