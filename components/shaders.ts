@@ -15,10 +15,6 @@ export const $vertexShader = `
     uniform float uTime;
     uniform vec2 uResolution;
 
-    float rand (vec2 co) {
-        return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453) - 0.5;
-    }
-
     void main() {
         float introTime = 25.0;
         float time = uTime - introTime;
@@ -26,10 +22,9 @@ export const $vertexShader = `
             vec3 vertexPosition = aVertexPosition;
 
             float wrapEffect = 1.0 - sin(3.14159265358 / 2.0 * uTime / introTime);
-            float r = rand(vec2(vertexPosition.x, vertexPosition.y));
 
             // vertexPosition.z += wrapEffect;
-            vertexPosition.x -= wrapEffect * (vertexPosition.x + r);
+            vertexPosition.x -= wrapEffect * (vertexPosition.x);
             vertexPosition.y -= wrapEffect * (vertexPosition.y);
 
             gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);

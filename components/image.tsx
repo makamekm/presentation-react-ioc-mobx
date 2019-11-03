@@ -64,9 +64,6 @@ export default class Hero extends React.Component<{
       .onReady(() => {
         // set a fov of 35 to exagerate perspective
         // plane.setPerspective(35);
-        if (this.imageContainer) {
-          this.imageContainer.style.visibility = "hidden";
-        }
         this.ready = true;
         this.forceUpdate();
       })
@@ -110,7 +107,7 @@ export default class Hero extends React.Component<{
             visibility: hidden;
             width: auto;
             height: 100%;
-            max-width: 100vw;
+            max-width: 80vw;
             max-height: 80vh;
           }
 
