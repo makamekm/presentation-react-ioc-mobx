@@ -23,18 +23,19 @@
     "@types/node": "12.7.5",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.1",
-    "mdx-deck": "3.0.13",
-    "gatsby-plugin-typescript": "^2.1.15",
-    "gatsby-plugin-compile-es6-packages": "^2.0.0",
-    "gatsby-theme-mdx-deck": "^3.0.13",
-    "gatsby-plugin-styled-jsx": "3.1.12",
-    "tslint": "5.20.0",
-    "typescript": "3.6.3",
     "execa": "3.2.0",
-    "meow": "5.0.0",
     "fs-extra": "8.1.0",
+    "gatsby": "^2.13.24",
+    "gatsby-plugin-compile-es6-packages": "^2.0.0",
+    "gatsby-plugin-load-script": "^1.0.6",
+    "gatsby-plugin-styled-jsx": "3.1.12",
+    "gatsby-plugin-typescript": "^2.1.15",
+    "gatsby-theme-mdx-deck": "^3.0.13",
+    "mdx-deck": "3.0.13",
+    "meow": "5.0.0",
     "raw-loader": "3.1.0",
-    "gatsby": "^2.13.24"
+    "tslint": "5.20.0",
+    "typescript": "3.6.3"
   },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "7.6.0",
@@ -48,6 +49,7 @@
     "react-ioc": "1.0.0",
     "react-mathjax2": "0.0.2",
     "react-particles-js": "2.7.0",
+    "react-text-fun": "^1.0.0",
     "styled-jsx": "3.2.3"
   }
 }

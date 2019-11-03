@@ -86,6 +86,7 @@ const Panel = ({children, fade, style, particles, logo}: {
       .anime {
         opacity: 0;
         transition: all 2s;
+        max-width: 80vw;
       }
 
       .anime.fade {

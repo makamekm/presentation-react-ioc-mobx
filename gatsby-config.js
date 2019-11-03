@@ -24,5 +24,11 @@ module.exports = {
         modules: ["mdx-deck", "@mdx-deck/themes"],
       },
     },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js",
+      },
+    },
   ],
 };
