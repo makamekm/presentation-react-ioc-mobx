@@ -15,31 +15,53 @@ export const $vertexShader = `
     uniform float uTime;
     uniform vec2 uResolution;
 
+    float rand (vec2 co) {
+        return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453) - 0.5;
+    }
+
     void main() {
-        float k = sin(uTime / 40.0);
-        if (k < 0.0) {
-            k = 0.0;
+        float introTime = 25.0;
+        float time = uTime - introTime;
+        if (uTime < introTime) {
+            vec3 vertexPosition = aVertexPosition;
+
+            float wrapEffect = 1.0 - sin(3.14159265358 / 2.0 * uTime / introTime);
+            float r = rand(vec2(vertexPosition.x, vertexPosition.y));
+
+            // vertexPosition.z += wrapEffect;
+            vertexPosition.x -= wrapEffect * (vertexPosition.x + r);
+            vertexPosition.y -= wrapEffect * (vertexPosition.y);
+
+            gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
+
+            vTextureCoord = aTextureCoord;
+            vVertexPosition = vertexPosition;
+        } else {
+            float k = sin(time / 40.0);
+            if (k < 0.0) {
+                k = 0.0;
+            }
+            k = sin(time / 20.0) * k;
+            if (k < 0.0) {
+                k = 0.0;
+            }
+            vec3 vertexPosition = aVertexPosition;
+            float wave = cos(time / 20000.0);
+            vec2 uPosition = vec2(0, 0);
+            float uDistance = distance(uPosition, vec2(vertexPosition.x, vertexPosition.y));
+            float waveSinusoid = cos(4.0 * (uDistance - (time / 20.0)));
+            float distanceStrength = (0.2 / (uDistance + 0.2));
+            float distortionEffect = waveSinusoid * distanceStrength * k / 15.0;
+
+            vertexPosition.z +=  distortionEffect;
+            vertexPosition.x +=  (distortionEffect * (uResolution.x / uResolution.y) * (uPosition.x - vertexPosition.x));
+            vertexPosition.y +=  distortionEffect * (uPosition.y - vertexPosition.y);
+
+            gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
+
+            vTextureCoord = aTextureCoord;
+            vVertexPosition = vertexPosition;
         }
-        k = sin(uTime / 20.0) * k;
-        if (k < 0.0) {
-            k = 0.0;
-        }
-        vec3 vertexPosition = aVertexPosition;
-        float wave = sin(uTime / 20000.0);
-        vec2 uPosition = vec2(0, 0);
-        float uDistance = distance(uPosition, vec2(vertexPosition.x, vertexPosition.y));
-        float waveSinusoid = sin(4.0 * (uDistance - (uTime / 20.0)));
-        float distanceStrength = (0.2 / (uDistance + 0.2));
-        float distortionEffect = waveSinusoid * distanceStrength * k / 15.0;
-
-        vertexPosition.z +=  distortionEffect;
-        vertexPosition.x +=  (distortionEffect * (uResolution.x / uResolution.y) * (uPosition.x - vertexPosition.x));
-        vertexPosition.y +=  distortionEffect * (uPosition.y - vertexPosition.y);
-
-        gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
-
-        vTextureCoord = aTextureCoord;
-        vVertexPosition = vertexPosition;
     }
 `;
 
