@@ -1,10 +1,12 @@
 import { Curtains } from "curtainsjs";
 import React from "react";
 
+import BigBadge from "./big-badge";
 import { $fragmentShader, $vertexShader } from "./shaders";
 
 export default class Hero extends React.Component<{
   src: string;
+  title: string;
 }> {
   private canvasContainer: HTMLDivElement;
   private planeContainer: HTMLDivElement;
@@ -74,59 +76,72 @@ export default class Hero extends React.Component<{
 
   public render() {
     return (
-      <div className="hero">
-        <div className="plane" ref={(ref) => this.planeContainer = ref} >
-          <img
-            onLoad={this.handleImageLoaded}
-            className="img"
-            ref={(ref) => this.imageContainer = ref}
-            src={this.props.src}
-          />
+      <div>
+        <div className={"title" + (this.ready ? " show" : "")}>
+          <BigBadge>
+            {this.props.title}
+          </BigBadge>
         </div>
-        <div className={"canvas" + (this.ready ? " show" : "")} ref={(ref) => this.canvasContainer = ref} />
-        <style jsx>{`
-          .hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-          }
+        <div className="hero">
+          <div className="plane" ref={(ref) => this.planeContainer = ref} >
+            <img
+              onLoad={this.handleImageLoaded}
+              className="img"
+              ref={(ref) => this.imageContainer = ref}
+              src={this.props.src}
+            />
+          </div>
+          <div className={"canvas" + (this.ready ? " show" : "")} ref={(ref) => this.canvasContainer = ref} />
+          <style jsx>{`
+            .hero {
+              position: relative;
+              overflow: hidden;
+              display: flex;
+              justify-content: center;
+              width: auto;
+            }
 
-          .plane {
-            text-align: center;
-            width: auto;
-            height: 100%;
-            max-width: 100vw;
-            max-height: 80vh;
-            content: '';
-          }
+            .plane {
+              text-align: center;
+              width: auto;
+              height: auto;
+              max-width: 80vw;
+              max-height: 80vh;
+              content: '';
+            }
 
-          .img {
-            visibility: hidden;
-            width: auto;
-            height: 100%;
-            max-width: 80vw;
-            max-height: 80vh;
-          }
+            .img {
+              visibility: hidden;
+              width: auto;
+              height: auto;
+              max-width: 80vw;
+              max-height: 80vh;
+            }
 
-          .canvas {
-            opacity: 0;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: opacity 2s;
-          }
+            .canvas {
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              transition: opacity 2s;
+            }
 
-          .canvas.show {
-            opacity: 1;
-          }
-        `}</style>
+            .canvas.show {
+              opacity: 1;
+            }
+
+            .title {
+              opacity: 0;
+              transition: opacity 2s;
+            }
+
+            .title.show {
+              opacity: 1;
+            }
+          `}</style>
+        </div>
       </div>
     );
   }

@@ -12,15 +12,27 @@ import EffectImage from "./components/image.tsx";
 import Panel from "./components/panel.tsx";
 import BigPanel from "./components/big-panel.tsx";
 import BigBadge from "./components/big-badge.tsx";
+import VeryBigBadge from "./components/very-big-badge.tsx";
 import OnAppear from "./components/on-appear.tsx";
 import Formula from "./components/formula.tsx";
-import Title from "./components/title.tsx";
 
 <OnAppear fade particles logo>
 
-# Prototyping & React
+<VeryBigBadge>
+  Prototyping & React
+</VeryBigBadge>
 
-<Title size={60} cellWidth={0.03} cellRadius={0.4}>by Karpov Maxim</Title>
+> How to make apps fast?
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+1. Theory
+2. Tools
+3. Examples
 
 </OnAppear>
 
@@ -38,6 +50,9 @@ import Title from "./components/title.tsx";
       <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
         Motivation & Comfort
       </BigPanel>
+      <Panel>
+        Let me prove...
+      </Panel>
     </div>
   </OnAppear>
 </Appear>
@@ -46,13 +61,9 @@ import Title from "./components/title.tsx";
 
 ---
 
-<OnAppear fade particles logo style={{minWidth: "90vw", minHeight: "90vh"}}>
+<OnAppear fade particles logo>
 
-<BigBadge>
-  Development circle
-</BigBadge>
-
-<EffectImage src="circle.png"/>
+<EffectImage src="circle.png" title="Development circle"/>
 
 </OnAppear>
 
@@ -68,13 +79,9 @@ import Title from "./components/title.tsx";
 
 ---
 
-<OnAppear fade particles logo style={{minWidth: "90vw", minHeight: "90vh"}}>
+<OnAppear fade particles logo>
 
-<BigBadge>
-  Neuton explanation
-</BigBadge>
-
-<EffectImage src="friction.png"/>
+<EffectImage src="friction.png" title="Neuton explanation"/>
 
 </OnAppear>
 
@@ -94,13 +101,9 @@ import Title from "./components/title.tsx";
 
 ---
 
-<OnAppear fade particles logo style={{minWidth: "90vw", minHeight: "90vh"}}>
+<OnAppear fade particles logo>
 
-<BigBadge>
-  BRAIN
-</BigBadge>
-
-<EffectImage src="brain.jpg"/>
+<EffectImage src="brain.jpg" title="BRAIN"/>
 
 </OnAppear>
 
@@ -118,13 +121,9 @@ import Title from "./components/title.tsx";
 
 ---
 
-<OnAppear fade particles logo style={{minWidth: "90vw", minHeight: "90vh"}}>
+<OnAppear fade particles logo>
 
-<BigBadge>
-  7 motivation factors
-</BigBadge>
-
-<EffectImage src="factors.png"/>
+<EffectImage src="factors.png" title="7 motivation factors"/>
 
 </OnAppear>
 
@@ -235,25 +234,17 @@ Strinct types resolves <span style={{color: "#2ECC71"}}>Findable, Credible</span
 
 ---
 
-<OnAppear fade particles logo style={{minWidth: "90vw", minHeight: "90vh"}}>
+<OnAppear fade particles logo>
 
-<BigBadge>
-  NextJS Homepage
-</BigBadge>
-
-<EffectImage src="nextjs-homepage.png"/>
+<EffectImage src="nextjs-homepage.png" title="NextJS Homepage"/>
 
 </OnAppear>
 
 ---
 
-<OnAppear fade particles logo style={{minWidth: "90vw", minHeight: "90vh"}}>
+<OnAppear fade particles logo>
 
-<BigBadge>
-  Gatsby Homepage
-</BigBadge>
-
-<EffectImage src="gatsby-homepage.png"/>
+<EffectImage src="gatsby-homepage.png" title="Gatsby Homepage"/>
 
 </OnAppear>
 
@@ -270,7 +261,7 @@ Strinct types resolves <span style={{color: "#2ECC71"}}>Findable, Credible</span
 </BigPanel>
 
 <BigPanel style={{marginTop: "20px"}}>
-  - Gatsby is for everithing for large apps (All-in-One)
+  - Gatsby is for large apps (all-in-one)
 </BigPanel>
 
 </OnAppear>

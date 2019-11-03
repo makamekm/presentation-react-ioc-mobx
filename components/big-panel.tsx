@@ -17,7 +17,6 @@ const Panel = ({children, className, color, style}: {
           background-color: ${color};
           color: white;
           font-weight: 800;
-          font-size: 40px;
           border-radius: 5px;
           text-shadow: 2px 4px 0px rgba(0, 0, 0, 0.4);
         }
