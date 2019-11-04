@@ -1,17 +1,19 @@
 import React, { memo } from "react";
 import Particles from "react-particles-js";
 
-const Panel = ({children, fade, style, particles, logo}: {
+const Panel = ({children, fade, style, particles, logo, align, width}: {
   children: any;
   fade?: boolean;
   style?: React.CSSProperties;
   particles?: boolean;
   logo?: boolean;
+  align?: string;
+  width?: string;
 }) => (
   <div
     style={style}
     className={"anime" + (fade ? " fade" : "") + (style && style.visibility === "hidden" ? " hidden" : "")}>
-    {particles
+    {particles && false
       ? <div className="particles">
         <Particles
         params={{
@@ -61,6 +63,11 @@ const Panel = ({children, fade, style, particles, logo}: {
       td:first-child {
         border-left: 1px solid;
       }
+
+      sub {
+        opacity: 0.6;
+        font-size: 80%;
+      }
     `}</style>
     <style jsx>{`
 
@@ -86,7 +93,8 @@ const Panel = ({children, fade, style, particles, logo}: {
       .anime {
         opacity: 0;
         transition: all 2s;
-        max-width: 80vw;
+        max-width: ${width || "80vw"};
+        text-align: ${align || "center"};
       }
 
       .anime.fade {

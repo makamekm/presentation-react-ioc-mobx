@@ -1,60 +1,60 @@
-import React from 'react'
-import classNames from 'classnames'
-import PropTypes from 'prop-types'
+import React from "react"
+import classNames from "classnames"
+import PropTypes from "prop-types"
 
-const cursor = <span className="Terminal-cursor" />
-const prompt = <span className="Terminal-prompt">$ </span>
+const cursor = <span className="Terminal-cursor" />;
+const prompt = <span className="Terminal-prompt">$ </span>;
 
 const renderLines = lines => {
   return lines.map(line => {
     return (
       <React.Fragment key={line.id}>
-        {line.cmd ? prompt : ''}
+        {line.cmd ? prompt : ""}
         {line.text}
-        {line.current ? cursor : ''}
+        {line.current ? cursor : ""}
         <br />
       </React.Fragment>
-    )
-  })
-}
+    );
+  });
+};
 
 const getWindowStyle = (white) => {
   return classNames({
-    'Terminal-window': true,
-    'Terminal-window-white': white
-  })
-}
+    "Terminal-window": true,
+    "Terminal-window-white": white,
+  });
+};
 
 const getTerminalStyle = (code) => {
   return classNames({
-    'Terminal-term': true,
-    'Terminal-term-code': code
-  })
-}
+    "Terminal-term": true,
+    "Terminal-term-code": code,
+  });
+};
 
 const getButtonStyle = (type) => {
   return classNames({
-    'Terminal-btn': true,
-    'Terminal-btn-close': type === 'close',
-    'Terminal-btn-minimize': type === 'minimize',
-    'Terminal-btn-maximize': type === 'maximize'
-  })
-}
+    "Terminal-btn": true,
+    "Terminal-btn-close": type === "close",
+    "Terminal-btn-minimize": type === "minimize",
+    "Terminal-btn-maximize": type === "maximize"
+  });
+};
 
 const getBodyStyle = (code) => {
   return classNames({
-    'Terminal-body': true,
-    'Terminal-body-animated': !code
-  })
-}
+    "Terminal-body": true,
+    "Terminal-body-animated": !code,
+  });
+};
 
 const getConsoleStyle = (code, white) => {
   return classNames({
-    'Terminal-console': true,
-    'Terminal-console-code': code,
-    'Terminal-console-white': white
-  })
-}
+    "Terminal-console": true,
+    "Terminal-console-code": code,
+    "Terminal-console-white": white,
+  });
+};
 
 const Terminal = ({ children, white, height, code }) => {
   return (
@@ -62,13 +62,13 @@ const Terminal = ({ children, white, height, code }) => {
       <div className={getTerminalStyle(code)} style={height ? {height} : null}>
         <div className="Terminal-header">
           <span
-            className={getButtonStyle('close')}
+            className={getButtonStyle("close")}
           />
           <span
-            className={getButtonStyle('minimize')}
+            className={getButtonStyle("minimize")}
           />
           <span
-            className={getButtonStyle('maximize')}
+            className={getButtonStyle("maximize")}
           />
         </div>
         <div className={getBodyStyle(code)}>
@@ -94,6 +94,7 @@ const Terminal = ({ children, white, height, code }) => {
           border-radius: 5px;
           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
           background: rgb(0, 0, 0);
+          text-align: left;
         }
 
         .Terminal-window-white {
@@ -190,17 +191,17 @@ const Terminal = ({ children, white, height, code }) => {
         }
       `}</style>
     </div>
-  ) 
-}
+  )
+};
 
 Terminal.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.array,
-    PropTypes.string
+    PropTypes.string,
   ]),
   white: PropTypes.bool,
   height: PropTypes.number,
-  code : PropTypes.bool
-}
+  code : PropTypes.bool,
+};
 
-export default Terminal
+export default Terminal;

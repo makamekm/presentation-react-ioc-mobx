@@ -2,6 +2,7 @@ const src = process.env.__SRC__;
 
 module.exports = {
   plugins: [
+    "@wardpeet/gatsby-plugin-static-site",
     {
       resolve: "gatsby-plugin-typescript",
       options: {

@@ -4,6 +4,7 @@ import {
   Step,
 } from "code-surfer";
 import "prismjs/components/prism-tsx";
+import "prismjs/components/prism-jsx";
 import { github, vsDark } from "@code-surfer/themes";
 export const theme = vsDark;
 import { Appear, Image } from 'mdx-deck'
@@ -12,14 +13,16 @@ import EffectImage from "./components/image.tsx";
 import Panel from "./components/panel.tsx";
 import BigPanel from "./components/big-panel.tsx";
 import BigBadge from "./components/big-badge.tsx";
+import Badge from "./components/badge.tsx";
 import VeryBigBadge from "./components/very-big-badge.tsx";
 import OnAppear from "./components/on-appear.tsx";
 import Formula from "./components/formula.tsx";
 import { loadingSpinner } from "./components/terminal.tsx";
+import MobxPingPong from "./examples/mobx-redux/mobx-app.jsx";
 
 import Terminal from './components/terminal/index';
 
-<OnAppear fade particles logo>
+<OnAppear fade particles logo align="left">
 
 <VeryBigBadge>
   Prototyping & React
@@ -167,16 +170,26 @@ import Terminal from './components/terminal/index';
 
 ---
 
-## Prototyping issues
+<OnAppear fade particles logo>
 
-#### Refacroring code
-To be fixed with **TypeScript**
+<div style={{marginBottom: "20px"}}><b>Prototyping issues</b></div>
 
-#### Refactoring structure
-To be fixed with **Flux Pattern**
+<Badge>
+  * Code refactoring *<br/>
+  <sub>- To be fixed with <b>TypeScript</b> -</sub>
+</Badge>
 
-#### Finding objects
-To be fixed with **Flat Structure**
+<Badge>
+  * Structure refactoring *<br/>
+  <sub>- To be fixed with <b>Flux Pattern</b> -</sub>
+</Badge>
+
+<Badge>
+  * Finding objects *<br/>
+  <sub>- To be fixed with <b>Flat Structure</b> -</sub>
+</Badge>
+
+</OnAppear>
 
 ---
 
@@ -184,10 +197,10 @@ Let's make some conclusions...
 
 ---
 
-<OnAppear fade particles logo>
+<OnAppear fade particles logo align="left">
 
 <Panel>
-  Arcitecture should be <span style={{color: "#2ECC71"}}>Findable</span>
+  Architecture should be <span style={{color: "#2ECC71"}}>Findable</span>
 </Panel>
 
 - /shared-components (inputs, buttons, panels, etc.) <span style={{color: "#2ECC71"}}>Useful</span>
@@ -228,6 +241,20 @@ Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> is
 <OnAppear fade particles logo>
 
 <Panel>
+  Application State
+</Panel>
+
+Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful, Usable</span> issues
+
+> Flux came from ECS (Entity - Component - System Pattern)
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+<Panel>
   What is the formula?
 </Panel>
 
@@ -235,7 +262,7 @@ Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> is
   <OnAppear fade>
     <div style={{textAlign: 'center'}}>
       <BigPanel color="#2ECC71">
-        React + Gatsby + IOC + MOBX = Speed
+        Gatsby + React + IOC + MOBX
       </BigPanel>
     </div>
   </OnAppear>
@@ -257,21 +284,160 @@ Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> is
 
 ---
 
+<OnAppear fade particles logo>
+
 ## Why not VueJS?
 
-It does not support TypeScript
+<Badge>It doesn't support TypeScript</Badge>
+
+</OnAppear>
 
 ---
+
+<OnAppear fade particles logo>
 
 ## Why not Redux?
 
-.example.
+<div>
+  <Badge>Let's Compare Ping Pong App:</Badge>
+  <sub>It sets "is pinging" in 1 second to true</sub>
+
+  <div style={{marginTop: "50px", borderRadius: "10px", border: "1px solid rgba(255, 255, 255, 0.5)", padding: "10px"}}>
+    <MobxPingPong/>
+  </div>
+</div>
+
+</OnAppear>
 
 ---
 
+<OnAppear fade particles logo width="100vw" align="left">
+
+<CodeSurferColumns>
+
+  <Step>
+
+  ```jsx subtitle="Mobx" file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx subtitle="Redux" file=./examples/mobx-redux/redux.jsx
+  ```
+
+  </Step>
+
+  <Step subtitle="Storage">
+
+  ```jsx 1:12 file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 1:24 file=./examples/mobx-redux/redux.jsx
+  ```
+
+  </Step>
+
+  <Step subtitle="Component">
+
+  ```jsx 14:29 file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 26:40 file=./examples/mobx-redux/redux.jsx
+  ```
+
+  </Step>
+
+  <Step subtitle="Injection">
+
+  ```jsx 20 file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 30,37:40 file=./examples/mobx-redux/redux.jsx
+  ```
+
+  </Step>
+
+  <Step subtitle="Rendering">
+
+  ```jsx 23:24 file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 32:33 file=./examples/mobx-redux/redux.jsx
+  ```
+
+  </Step>
+
+  <Step subtitle="Provider">
+
+  ```jsx 31:37,42:44 file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 42:53,57:59 file=./examples/mobx-redux/redux.jsx
+  ```
+
+  </Step>
+
+</CodeSurferColumns>
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo width="100vw" align="left">
+
+<CodeSurfer>
+
+  ```jsx 5:12 subtitle="React IOC" file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 16:29 subtitle="Mobx" file=./examples/mobx-redux/mobx.jsx
+  ```
+
+</CodeSurfer>
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+<div style={{marginBottom: "20px"}}><b>Conclusion?</b></div>
+
+<div style={{display: 'flex', flexDirection: 'row', textAlign: 'left', width: "100%", justifyContent: "center"}}>
+  <Badge>
+    Mobx<br/>
+    <BigPanel style={{marginTop: '20px'}} color="#2ECC71">+ <b>Simple</b></BigPanel>
+    <BigPanel style={{marginTop: '20px'}} color="#2ECC71">+ <b>Mutable</b></BigPanel>
+  </Badge>
+
+  <Badge>
+    Redux<br/>
+    <BigPanel style={{marginTop: '20px'}}>- <b>Complex</b></BigPanel>
+    <BigPanel style={{marginTop: '20px'}}>- <b>Immutable</b></BigPanel>
+  </Badge>
+</div>
+
+> It's hard to build logic between multiple immutable objects
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+## 1/2 Questions?
+
+<Badge>Before going further...</Badge>
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
 ## Why not NextJS?
 
-Let's compare their homepages
+<Badge>Let's compare their homepages...</Badge>
+
+</OnAppear>
 
 ---
 
@@ -291,17 +457,17 @@ Let's compare their homepages
 
 ---
 
-<OnAppear fade particles logo>
+<OnAppear fade particles logo align="left">
 
 <BigPanel color="#2ECC71">
-  + Static by default<br/>
+  + Gatsby static by default<br/>
   + Gatsby can be used with any provider<br/>
   + Gatsby is for large or small apps<br/>
   + Gatsby has templates
 </BigPanel>
 
 <BigPanel style={{marginTop: "20px"}}>
-  + Isomorphic by default<br/>
+  + NextJS isomorphic by default<br/>
   - NextJS can be used only for Zeit provider<br/>
   - NextJS is for small apps<br/>
   - NextJS hasn't templates
@@ -323,7 +489,10 @@ Let's compare their homepages
         'text': 'npm install -g gatsby-cli',
         'cmd': true,
       },
-      loadingSpinner(),
+      loadingSpinner({
+        onLoading: 'Installing...',
+        onLoad: 'Gatsby has been installed!!',
+        }),
       {
         'text': 'gatsby new todo-app https://github.com/makamekm/gatsby-starter-typescript-ioc-mobx',
         'cmd': true,
@@ -359,6 +528,62 @@ Let's compare their homepages
 
 ---
 
+<OnAppear fade particles logo>
+
+**How to deploy your app?**
+
+<div>
+  <Terminal
+    height={400}
+    lines={[
+      {
+        'text': 'npm install -g now',
+        'cmd': true,
+      },
+      loadingSpinner({
+        onLoading: 'Installing...',
+        onLoad: 'NowJS has been installed!!',
+        }),
+      {
+        'text': 'now',
+        'cmd': true,
+      },
+      loadingSpinner({
+        onLoading: 'Deploying...',
+        onLoad: 'Your app is ready at http://todoapp.me.zeit.com/',
+      }),
+    ]}
+    interval={20}
+  />
+</div>
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+# Code Time!
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+<div>
+  <Badge>Let's make a todo app:</Badge>
+  <sub>We have to implement Input and List of TODOs</sub>
+
+  <div style={{marginTop: "50px", borderRadius: "10px", border: "1px solid rgba(255, 255, 255, 0.5)", padding: "10px"}}>
+    <MobxPingPong/>
+  </div>
+</div>
+
+</OnAppear>
+
+---
+
 <OnAppear fade logo>
 
 <CodeSurfer>
@@ -375,10 +600,16 @@ Let's compare their homepages
 
 ---
 
-<OnAppear particles logo fade>
+<OnAppear fade particles logo>
 
-# Goal
+# Final Questions?
 
-How to make applications fast?
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+<EffectImage src="yoda.jpg" title="Thank you!"/>
 
 </OnAppear>
