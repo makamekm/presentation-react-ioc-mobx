@@ -642,6 +642,57 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <OnAppear fade particles logo>
 
+**Do you wanna make presentations like this?**
+
+<div>
+  <Terminal
+    height={400}
+    lines={[
+      {
+        'text': 'npm install -g gatsby-cli',
+        'cmd': true,
+      },
+      loadingSpinner({
+        onLoading: 'Installing...',
+        onLoad: 'Gatsby has been installed!!',
+        }),
+      {
+        'text': 'gatsby new my-presentation https://github.com/makamekm/gatsby-starter-presentation',
+        'cmd': true,
+      },
+      loadingSpinner({
+        onLoading: 'Initializing...',
+        onLoad: 'Your app has been initialized!',
+      }),
+      {
+        'text': 'cd my-presentation',
+        'cmd': true,
+      },
+      {
+        'text': 'npm run dev',
+        'cmd': true,
+      },
+      loadingSpinner({
+        onLoading: 'Compiling...',
+        onLoad: 'Your app is ready at http://localhost:8000/',
+      }),
+      {
+        'text': '',
+      },
+      {
+        'text': '~~~ You are ready to go at index.mdx! ~~~',
+      },
+    ]}
+    interval={20}
+  />
+</div>
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
 <EffectImage src="yoda.jpg" title="Thank you!"/>
 
 </OnAppear>
