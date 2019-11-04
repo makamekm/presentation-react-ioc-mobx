@@ -59,9 +59,9 @@ import Terminal from './components/terminal/index';
       <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
         Motivation & Comfort
       </BigPanel>
-      <Panel>
+      <h3>
         Let me prove...
-      </Panel>
+      </h3>
     </div>
   </OnAppear>
 </Appear>
@@ -80,9 +80,9 @@ import Terminal from './components/terminal/index';
 
 <OnAppear fade particles logo>
 
-<BigBadge>
+<h1>
   What is the project speed?
-</BigBadge>
+</h1>
 
 </OnAppear>
 
@@ -146,12 +146,12 @@ import Terminal from './components/terminal/index';
 
 <Appear>
   <OnAppear fade>
-    <div style={{textAlign: 'center'}}>
-      <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
-        The highest importance <br/>is<br/> Architecture & Tools
+    <div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
+      <BigPanel style={{display: 'inline-block'}} color="#4591EA">
+        > Architecture & Tools are very important
       </BigPanel>
-      <BigPanel style={{display: 'inline-block', marginLeft: "20px"}}>
-        Developers <br/>are<br/> Users
+      <BigPanel style={{display: 'inline-block', marginTop: "20px"}} color="#4591EA">
+        > Developers are Users
       </BigPanel>
     </div>
   </OnAppear>
@@ -163,9 +163,9 @@ import Terminal from './components/terminal/index';
 
 <OnAppear fade particles logo>
 
-<Panel>
-  So, how to make applications faster?
-</Panel>
+<h1>
+  How to make applications faster?
+</h1>
 
 </OnAppear>
 
@@ -173,7 +173,7 @@ import Terminal from './components/terminal/index';
 
 <OnAppear fade particles logo>
 
-<div style={{marginBottom: "20px"}}><b>Prototyping issues</b></div>
+<div style={{marginBottom: "20px"}}><b>GENERAL PROTOTYPING ISSUES</b></div>
 
 <Badge>
   * Code refactoring *<br/>
@@ -194,7 +194,11 @@ import Terminal from './components/terminal/index';
 
 ---
 
-Let's make some conclusions...
+<OnAppear fade particles logo>
+
+<b>Let's make some conclusions...</b>
+
+</OnAppear>
 
 ---
 
@@ -234,10 +238,10 @@ Let's make some conclusions...
 
 <CodeSurfer>
 
-```tsx subtitle="Button" file=./examples/style/button.tsx
+```tsx subtitle="Button with styles in it" file=./examples/style/button.tsx
 ```
 
-```tsx 8:28 subtitle="Incapsulated styles" file=./examples/style/button.tsx
+```tsx 8:28 file=./examples/style/button.tsx
 ```
 
 </CodeSurfer>
@@ -254,7 +258,7 @@ Let's make some conclusions...
 
 Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> issues
 
-> even "any" is better than nothing 
+> Even "any" is better than nothing 
 
 </OnAppear>
 
@@ -411,6 +415,15 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   ```
 
   ```jsx 16:29 subtitle="Mobx" file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 23[25:49] subtitle="Observable Variable" file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 24[24:43] subtitle="Observable Action" file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 29 subtitle="React Mobx Observer" file=./examples/mobx-redux/mobx.jsx
   ```
 
 </CodeSurfer>
