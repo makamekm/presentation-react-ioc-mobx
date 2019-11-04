@@ -15,6 +15,9 @@ import BigBadge from "./components/big-badge.tsx";
 import VeryBigBadge from "./components/very-big-badge.tsx";
 import OnAppear from "./components/on-appear.tsx";
 import Formula from "./components/formula.tsx";
+import { loadingSpinner } from "./components/terminal.tsx";
+
+import Terminal from './components/terminal/index';
 
 <OnAppear fade particles logo>
 
@@ -24,15 +27,17 @@ import Formula from "./components/formula.tsx";
 
 > How to make apps fast?
 
+<Formula>> __</Formula>
+
 </OnAppear>
 
 ---
 
 <OnAppear fade particles logo>
 
-1. Theory
-2. Tools
-3. Examples
+<BigBadge>
+  Theory - Tools - Examples
+</BigBadge>
 
 </OnAppear>
 
@@ -138,8 +143,11 @@ import Formula from "./components/formula.tsx";
 <Appear>
   <OnAppear fade>
     <div style={{textAlign: 'center'}}>
-      <BigPanel style={{display: 'inline-block'}}>
-        Architecture & tools are the main part of development
+      <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
+        The highest importance <br/>is<br/> Architecture & Tools
+      </BigPanel>
+      <BigPanel style={{display: 'inline-block', marginLeft: "20px"}}>
+        Developers <br/>are<br/> Users
       </BigPanel>
     </div>
   </OnAppear>
@@ -152,7 +160,7 @@ import Formula from "./components/formula.tsx";
 <OnAppear fade particles logo>
 
 <Panel>
-  How to make applications faster?
+  So, how to make applications faster?
 </Panel>
 
 </OnAppear>
@@ -180,7 +188,7 @@ import Formula from "./components/formula.tsx";
   Styles
 </Panel>
 
-Should be incapsulated inside components <span style={{color: "#2ECC71"}}>Findable</span>
+Should be <b>incapsulated</b> inside components <span style={{color: "#2ECC71"}}>Findable</span>
 
 </OnAppear>
 
@@ -192,7 +200,9 @@ Should be incapsulated inside components <span style={{color: "#2ECC71"}}>Findab
   TypeScript only
 </Panel>
 
-Strinct types resolves <span style={{color: "#2ECC71"}}>Findable, Credible</span> issues
+Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> issues
+
+> even "any" is better than nothing 
 
 </OnAppear>
 
@@ -208,7 +218,7 @@ Strinct types resolves <span style={{color: "#2ECC71"}}>Findable, Credible</span
   <OnAppear fade>
     <div style={{textAlign: 'center'}}>
       <BigPanel color="#2ECC71">
-        React + NextJS + IOC + MOBX = Speed
+        React + Gatsby + IOC + MOBX = Speed
       </BigPanel>
     </div>
   </OnAppear>
@@ -220,14 +230,10 @@ Strinct types resolves <span style={{color: "#2ECC71"}}>Findable, Credible</span
 
 <OnAppear fade particles logo>
 
-<Panel>
-  Alternatives?
-</Panel>
-
 | Base | Alternative |
 | --- | --- |
 | <BigPanel color="#2ECC71">React</BigPanel> | <BigPanel>Vue</BigPanel> |
-| <BigPanel color="#2ECC71">NextJS + TS</BigPanel> | <BigPanel>Gatsby + Styled JSX + TS</BigPanel> |
+| <BigPanel color="#2ECC71">Gatsby</BigPanel> | <BigPanel>NextJS</BigPanel> |
 | <BigPanel color="#2ECC71">IOC + MobX</BigPanel> | <BigPanel>Redux Observable</BigPanel> |
 
 </OnAppear>
@@ -252,16 +258,18 @@ Strinct types resolves <span style={{color: "#2ECC71"}}>Findable, Credible</span
 
 <OnAppear fade particles logo>
 
-<h3>
-  Conclusion
-</h3>
-
 <BigPanel color="#2ECC71">
-  + NextJS is simple
+  + Gatsby is simple, but static<br/>
+  + Gatsby can be used with any provider<br/>
+  + Gatsby is for large or small apps<br/>
+  + Gatsby has templates
 </BigPanel>
 
 <BigPanel style={{marginTop: "20px"}}>
-  - Gatsby is for large apps (all-in-one)
+  + NextJS is simple & isomorphic<br/>
+  - NextJS can be used only for Zeit provider<br/>
+  - NextJS is for small apps<br/>
+  - NextJS hasn't templates
 </BigPanel>
 
 </OnAppear>
@@ -270,9 +278,47 @@ Strinct types resolves <span style={{color: "#2ECC71"}}>Findable, Credible</span
 
 <OnAppear fade particles logo>
 
-**Goal**
+**How to start with Gatsby?**
 
-## Make applications fast
+<div>
+  <Terminal
+    height={400}
+    lines={[
+      {
+        'text': 'npm install -g gatsby-cli',
+        'cmd': true,
+      },
+      loadingSpinner(),
+      {
+        'text': 'gatsby new todo-app https://github.com/makamekm/gatsby-starter-typescript-ioc-mobx',
+        'cmd': true,
+      },
+      loadingSpinner({
+        onLoading: 'Initializing...',
+        onLoad: 'Your app has been initialized!',
+      }),
+      {
+        'text': 'cd todo-app',
+        'cmd': true,
+      },
+      {
+        'text': 'npm run dev',
+        'cmd': true,
+      },
+      loadingSpinner({
+        onLoading: 'Compiling...',
+        onLoad: 'Your app is ready at http://localhost:8000/',
+      }),
+      {
+        'text': '',
+      },
+      {
+        'text': '~~~ You are ready to go! ~~~',
+      },
+    ]}
+    interval={20}
+  />
+</div>
 
 </OnAppear>
 
