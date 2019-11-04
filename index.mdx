@@ -18,6 +18,7 @@ import VeryBigBadge from "./components/very-big-badge.tsx";
 import OnAppear from "./components/on-appear.tsx";
 import Formula from "./components/formula.tsx";
 import { loadingSpinner } from "./components/terminal.tsx";
+import Button from "./examples/style/button.tsx";
 import MobxPingPong from "./examples/mobx-redux/mobx-app.jsx";
 
 import Terminal from './components/terminal/index';
@@ -218,7 +219,28 @@ Let's make some conclusions...
   Styles
 </Panel>
 
-Should be <b>incapsulated</b> inside components <span style={{color: "#2ECC71"}}>Findable</span>
+<div>
+  Should be <b>incapsulated</b> inside components <span style={{color: "#2ECC71"}}>Findable</span>
+  <br/>
+  <br/>
+  <Button>I am a button!</Button>
+</div>
+
+</OnAppear>
+
+---
+
+<OnAppear fade logo width="100vw" align="left">
+
+<CodeSurfer>
+
+```tsx subtitle="Button" file=./examples/style/button.tsx
+```
+
+```tsx 8:28 subtitle="Incapsulated styles" file=./examples/style/button.tsx
+```
+
+</CodeSurfer>
 
 </OnAppear>
 
@@ -311,7 +333,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 ---
 
-<OnAppear fade particles logo width="100vw" align="left">
+<OnAppear fade logo width="100vw" align="left">
 
 <CodeSurferColumns>
 
@@ -381,7 +403,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 ---
 
-<OnAppear fade particles logo width="100vw" align="left">
+<OnAppear fade logo width="100vw" align="left">
 
 <CodeSurfer>
 
@@ -584,14 +606,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 ---
 
-<OnAppear fade logo>
+<OnAppear fade logo width="100vw" align="left">
 
 <CodeSurfer>
 
-```tsx 1 subtitle="Import React" file=./components/panel.tsx
-```
-
-```tsx 10:17 subtitle="Use incapsulated styles" file=./components/panel.tsx
+```tsx subtitle="Import React" file=./components/panel.tsx
 ```
 
 </CodeSurfer>
