@@ -3,14 +3,7 @@ const src = process.env.__SRC__;
 module.exports = {
   plugins: [
     "@wardpeet/gatsby-plugin-static-site",
-    {
-      resolve: "gatsby-plugin-typescript",
-      options: {
-        isTSX: true,
-        jsxPragma: `jsx`,
-        allExtensions: true,
-      },
-    },
+    "gatsby-plugin-typescript",
     "gatsby-plugin-styled-jsx",
     {
       resolve: "gatsby-theme-mdx-deck",
