@@ -21,6 +21,8 @@ import Terminal, { loadingSpinner } from './components/terminal/index.jsx';
 
 import Button from "./examples/style/button.tsx";
 import MobxPingPong from "./examples/mobx-redux/mobx-app.jsx";
+import TodoAppLayout from "./examples/todo/layouts/index.tsx";
+import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo align="left">
 
@@ -633,14 +635,16 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 ---
 
-<Layout fade particles logo>
+<Layout fade particles logo width="100vw">
 
 <div>
   <Badge>Let's make a todo app:</Badge>
   <sub>We have to implement Input and List of TODOs</sub>
 
-  <div style={{marginTop: "50px", borderRadius: "10px", border: "1px solid rgba(255, 255, 255, 0.5)", padding: "10px"}}>
-    <MobxPingPong/>
+  <div style={{marginTop: "50px"}}>
+    <TodoAppLayout>
+      <TodoAppPage/>
+    </TodoAppLayout>
   </div>
 </div>
 
@@ -686,7 +690,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
         onLoad: 'Gatsby has been installed!!',
         }),
       {
-        'text': 'gatsby new my-presentation https://github.com/makamekm/gatsby-starter-presentation',
+        'text': 'gatsby new my-presentation https://github.com/makamekm/presentation-react-ioc-mobx',
         'cmd': true,
       },
       loadingSpinner({
