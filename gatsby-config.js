@@ -1,5 +1,3 @@
-const src = process.env.__SRC__;
-
 module.exports = {
   plugins: [
     "@wardpeet/gatsby-plugin-static-site",
@@ -9,7 +7,7 @@ module.exports = {
       resolve: "gatsby-theme-mdx-deck",
       options: {
         cli: true,
-        contentPath: src,
+        contentPath: "index.mdx",
       },
     },
     {
@@ -18,11 +16,12 @@ module.exports = {
         modules: ["mdx-deck", "@mdx-deck/themes"],
       },
     },
-    {
-      resolve: "gatsby-plugin-load-script",
-      options: {
-        src: "https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js",
-      },
-    },
+    // You can add additional scripts here
+    // {
+    //   resolve: "gatsby-plugin-load-script",
+    //   options: {
+    //     src: "https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js",
+    //   },
+    // },
   ],
 };

@@ -1,11 +1,11 @@
 {
   "name": "presentation-react-ioc-mobx",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Presentation using Gatsby",
+  "main": "index.mdx",
   "scripts": {
-    "start": "__SRC__=index.mdx gatsby develop",
-    "build": "__SRC__=index.mdx gatsby build",
+    "dev": "gatsby develop",
+    "build": "gatsby build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,8 +27,6 @@
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.1",
     "@types/classnames": "2.2.9",
-    "execa": "3.2.0",
-    "fs-extra": "8.1.0",
     "gatsby": "^2.13.24",
     "gatsby-plugin-compile-es6-packages": "^2.0.0",
     "gatsby-plugin-load-script": "^1.0.6",
@@ -37,14 +35,9 @@
     "gatsby-theme-mdx-deck": "^3.0.13",
     "@wardpeet/gatsby-plugin-static-site": "0.1.1",
     "mdx-deck": "3.0.13",
-    "meow": "5.0.0",
-    "raw-loader": "3.1.0",
     "typescript": "3.6.3"
   },
   "dependencies": {
-    "@babel/plugin-proposal-decorators": "7.6.0",
-    "@babel/polyfill": "^7.6.0",
-    "@babel/preset-typescript": "^7.6.0",
     "code-surfer": "3.0.0-beta.1",
     "curtainsjs": "4.0.4",
     "debounce": "1.2.0",
@@ -55,7 +48,6 @@
     "react-ioc": "1.0.0",
     "react-mathjax2": "0.0.2",
     "react-particles-js": "2.7.0",
-    "react-text-fun": "^1.0.0",
     "styled-jsx": "3.2.3"
   }
 }
