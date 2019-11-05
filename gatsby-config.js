@@ -17,11 +17,11 @@ module.exports = {
       },
     },
     // You can add additional scripts here
-    // {
-    //   resolve: "gatsby-plugin-load-script",
-    //   options: {
-    //     src: "https://unpkg.com/blotterjs-fork@0.1.0/build/blotter.min.js",
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML",
+      },
+    },
   ],
 };

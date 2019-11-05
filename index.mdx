@@ -9,21 +9,20 @@ import { github, vsDark } from "@code-surfer/themes";
 export const theme = vsDark;
 import { Appear, Image } from 'mdx-deck'
 
-import EffectImage from "./components/image.tsx";
-import Panel from "./components/panel.tsx";
-import BigPanel from "./components/big-panel.tsx";
-import BigBadge from "./components/big-badge.tsx";
-import Badge from "./components/badge.tsx";
-import VeryBigBadge from "./components/very-big-badge.tsx";
-import OnAppear from "./components/on-appear.tsx";
+import Layout from "./components/layout.tsx";
+import EffectImage from "./components/image/index.tsx";
+import Panel from "./components/panels/panel.tsx";
+import BigPanel from "./components/panels/big-panel.tsx";
+import BigBadge from "./components/panels/big-badge.tsx";
+import Badge from "./components/panels/badge.tsx";
+import VeryBigBadge from "./components/panels/very-big-badge.tsx";
 import Formula from "./components/formula.tsx";
-import { loadingSpinner } from "./components/terminal.tsx";
+import Terminal, { loadingSpinner } from './components/terminal/index.jsx';
+
 import Button from "./examples/style/button.tsx";
 import MobxPingPong from "./examples/mobx-redux/mobx-app.jsx";
 
-import Terminal from './components/terminal/index';
-
-<OnAppear fade particles logo align="left">
+<Layout fade particles logo align="left">
 
 <VeryBigBadge>
   Prototyping & React
@@ -33,28 +32,28 @@ import Terminal from './components/terminal/index';
 
 <Formula>> __</Formula>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <BigBadge>
   Theory - Tools - Examples
 </BigBadge>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <Panel>
   How to make applications faster?
 </Panel>
 
 <Appear>
-  <OnAppear fade>
+  <Layout fade>
     <div style={{textAlign: 'center'}}>
       <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
         Motivation & Comfort
@@ -63,40 +62,40 @@ import Terminal from './components/terminal/index';
         Let me prove...
       </h3>
     </div>
-  </OnAppear>
+  </Layout>
 </Appear>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <EffectImage src="circle.png" title="Development circle"/>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <h1>
   What is the project speed?
 </h1>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <EffectImage src="friction.png" title="Neuton explanation"/>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <BigBadge>
   Project Speed
@@ -106,19 +105,19 @@ import Terminal from './components/terminal/index';
   V = (Ideas) / (Delta t) - underset(Friction)(F)
 </Formula>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <EffectImage src="brain.jpg" title="BRAIN"/>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo style={{textAlign: "center"}}>
+<Layout fade particles logo style={{textAlign: "center"}}>
 
 <BigBadge>
   DELAY
@@ -126,26 +125,26 @@ import Terminal from './components/terminal/index';
 
 <BigPanel color="#2ECC71" style={{marginTop: "10px"}}>Instincts (N ms)</BigPanel> + <BigPanel color="#4591EA">Emotions (10 * N)</BigPanel> + <BigPanel>Reason (100 * N)</BigPanel>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <EffectImage src="factors.png" title="7 motivation factors"/>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <Panel>
   Conclusion?
 </Panel>
 
 <Appear>
-  <OnAppear fade>
+  <Layout fade>
     <div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
       <div style={{fontWeight: 800}}>
         1. Architecture & Tools are very important
@@ -154,24 +153,24 @@ import Terminal from './components/terminal/index';
         2. Developers are Users
       </div>
     </div>
-  </OnAppear>
+  </Layout>
 </Appear>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <h1>
   How to make applications faster?
 </h1>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <div style={{marginBottom: "20px"}}><b>GENERAL PROTOTYPING ISSUES</b></div>
 
@@ -190,19 +189,19 @@ import Terminal from './components/terminal/index';
   <sub>- To be fixed with <b>Flat Structure</b> -</sub>
 </Badge>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <b>Let's make some conclusions...</b>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo align="left">
+<Layout fade particles logo align="left">
 
 <Panel>
   Architecture should be <span style={{color: "#2ECC71"}}>Findable</span>
@@ -213,11 +212,11 @@ import Terminal from './components/terminal/index';
 - /pages (routing) <span style={{color: "#2ECC71"}}>Findable</span>
 - /services (dependency injection) <span style={{color: "#2ECC71"}}>Usable</span>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <Panel>
   Styles
@@ -230,11 +229,11 @@ import Terminal from './components/terminal/index';
   <Button>I am a button!</Button>
 </div>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade logo width="100vw" align="left">
+<Layout fade logo width="100vw" align="left">
 
 <CodeSurfer>
 
@@ -252,11 +251,11 @@ import Terminal from './components/terminal/index';
 
 </CodeSurfer>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <Panel>
   TypeScript only
@@ -266,11 +265,11 @@ Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> is
 
 > Even "any" is better than nothing 
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <Panel>
   Application State
@@ -280,31 +279,31 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 > Flux came from ECS (Entity - Component - System Pattern)
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <Panel>
   What is the formula?
 </Panel>
 
 <Appear>
-  <OnAppear fade>
+  <Layout fade>
     <div style={{textAlign: 'center'}}>
       <BigPanel color="#2ECC71">
         Gatsby + React + IOC + MOBX
       </BigPanel>
     </div>
-  </OnAppear>
+  </Layout>
 </Appear>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 | Base | Alternative |
 | --- | --- |
@@ -312,21 +311,21 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 | <BigPanel color="#2ECC71">Gatsby</BigPanel> | <BigPanel>NextJS</BigPanel> |
 | <BigPanel color="#2ECC71">IOC + MobX</BigPanel> | <BigPanel>Redux Observable</BigPanel> |
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 ## Why not VueJS?
 
 <Badge>It doesn't support TypeScript</Badge>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 ## Why not Redux?
 
@@ -339,11 +338,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   </div>
 </div>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade logo width="100vw" align="left">
+<Layout fade logo width="100vw" align="left">
 
 <CodeSurferColumns>
 
@@ -419,11 +418,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 </CodeSurferColumns>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade logo width="100vw" align="left">
+<Layout fade logo width="100vw" align="left">
 
 <CodeSurfer>
 
@@ -444,11 +443,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 </CodeSurfer>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <div style={{display: 'flex', flexDirection: 'row', textAlign: 'left', width: "90%", justifyContent: "center"}}>
 
@@ -458,11 +457,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 </div>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <div style={{marginBottom: "20px"}}><b>Conclusion?</b></div>
 
@@ -482,47 +481,47 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 > It's hard to build logic between multiple immutable objects
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 ## 1/2 Questions?
 
 <Badge>Before going further...</Badge>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 ## Why not NextJS?
 
 <Badge>Let's compare their homepages...</Badge>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <EffectImage src="nextjs-homepage.png" title="NextJS Homepage"/>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <EffectImage src="gatsby-homepage.png" title="Gatsby Homepage"/>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo align="left">
+<Layout fade particles logo align="left">
 
 <BigPanel color="#2ECC71">
   + Gatsby static by default<br/>
@@ -538,11 +537,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   - NextJS hasn't templates
 </BigPanel>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 **How to start with Gatsby?**
 
@@ -589,11 +588,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   />
 </div>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 **How to deploy your app?**
 
@@ -622,19 +621,19 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   />
 </div>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 # Code Time!
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <div>
   <Badge>Let's make a todo app:</Badge>
@@ -645,32 +644,32 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   </div>
 </div>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade logo width="100vw" align="left">
+<Layout fade logo width="100vw" align="left">
 
 <CodeSurfer>
 
-```tsx subtitle="Import React" file=./components/panel.tsx
+```tsx subtitle="Import React" file=./components/panels/panel.tsx
 ```
 
 </CodeSurfer>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 # Final Questions?
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 **Do you wanna make presentations like this?**
 
@@ -717,12 +716,12 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   />
 </div>
 
-</OnAppear>
+</Layout>
 
 ---
 
-<OnAppear fade particles logo>
+<Layout fade particles logo>
 
 <EffectImage src="yoda.jpg" title="Thank you!"/>
 
-</OnAppear>
+</Layout>

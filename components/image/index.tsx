@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Curtains } from "curtainsjs";
 import React from "react";
 
-import BigBadge from "./big-badge";
+import BigBadge from "../panels/big-badge";
 import { $fragmentShader, $vertexShader } from "./shaders";
 
 export default class Hero extends React.Component<{
