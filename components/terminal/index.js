@@ -1,5 +1,5 @@
-import Renderer from "./Renderer";
-import Code from "./Code";
+import Renderer from "./renderer";
+import Code from "./code";
 
 export {
   Code,

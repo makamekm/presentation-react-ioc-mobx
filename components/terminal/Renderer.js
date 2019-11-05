@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Terminal from "./Terminal"
-import termContent from "./contentHandler"
+import Terminal from "./terminal"
+import termContent from "./content-handler"
 
 class Renderer extends React.Component {
   constructor(props) {

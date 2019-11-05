@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Terminal from "./Terminal";
+import Terminal from "./terminal";
 
 const Code = ({ children, ...rest }) => {
   return (

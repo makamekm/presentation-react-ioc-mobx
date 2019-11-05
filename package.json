@@ -39,7 +39,6 @@
     "mdx-deck": "3.0.13",
     "meow": "5.0.0",
     "raw-loader": "3.1.0",
-    "tslint": "5.20.0",
     "typescript": "3.6.3"
   },
   "dependencies": {
