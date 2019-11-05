@@ -1,14 +1,14 @@
-const terminalContent = function* (lines) {
+const terminalContent = function*(lines) {
   if (lines.length === 0) {
-    return []
+    return [];
   }
 
-  let lineIndex = 0
-  let linePosition = 0
-  let cmdTimer = null
-  let frameIndex = 0
-  let frameTimer = null
-  let frameRepeatCounter = 0
+  let lineIndex = 0;
+  let linePosition = 0;
+  let cmdTimer = null;
+  let frameIndex = 0;
+  let frameTimer = null;
+  let frameRepeatCounter = 0;
 
   // The current contents of the terminal
   const buffer = [];
@@ -17,7 +17,7 @@ const terminalContent = function* (lines) {
     if (lineIndex < lines.length) {
       // next line is an output line
       if (!lines[lineIndex].cmd) {
-        const frames = lines[lineIndex].frames
+        const frames = lines[lineIndex].frames;
 
         // a static line, add it to buffer and move to next line
         if (!frames) {
@@ -25,12 +25,12 @@ const terminalContent = function* (lines) {
             id: lineIndex,
             text: lines[lineIndex].text,
             cmd: false,
-            current: false
-          })
+            current: false,
+          });
 
-          yield buffer
-          linePosition = 0
-          lineIndex++
+          yield buffer;
+          linePosition = 0;
+          lineIndex++;
         } else if (frameIndex < frames.length) {
           // this is the first frame
           if (frameIndex === 0) {
@@ -41,93 +41,95 @@ const terminalContent = function* (lines) {
                 id: lineIndex,
                 text: frames[0].text,
                 cmd: false,
-                current: true
-              })
+                current: true,
+              });
             }
           }
-          
+
           // show the current frame's text
-          buffer[lineIndex].text = frames[frameIndex].text
+          buffer[lineIndex].text = frames[frameIndex].text;
 
           // start a timer to render the next frame only after the delay
           if (frameTimer == null) {
             if (!isNaN(frames[frameIndex].delay)) {
+              // eslint-disable-next-line
               frameTimer = setTimeout(() => {
-                clearTimeout(frameTimer)
-                frameTimer = null
-                frameIndex++
-              }, frames[frameIndex].delay)
+                clearTimeout(frameTimer);
+                frameTimer = null;
+                frameIndex++;
+              }, frames[frameIndex].delay);
               // yield here to avoid condition where frameIndex goes out of bounds
               // from the timeout
-              yield buffer
+              yield buffer;
             } else {
-              frameIndex++
+              frameIndex++;
             }
           }
         } else {
-          const { repeat, repeatCount } = lines[lineIndex]
+          const { repeat, repeatCount } = lines[lineIndex];
 
           // if current line should be repeated, reset frame counter and index
           if (repeat && frameRepeatCounter < repeatCount) {
-            frameRepeatCounter++
-            frameIndex = 0
+            frameRepeatCounter++;
+            frameIndex = 0;
           } else {
             // if final frame specified, use it as the text
             if (lines[lineIndex].text) {
-              buffer[lineIndex].text = lines[lineIndex].text
+              buffer[lineIndex].text = lines[lineIndex].text;
             }
 
             // move to next line
-            buffer[lineIndex].current = false
-            linePosition = 0
-            frameIndex = 0
-            lineIndex++
+            buffer[lineIndex].current = false;
+            linePosition = 0;
+            frameIndex = 0;
+            lineIndex++;
           }
         }
       } else if (linePosition > lines[lineIndex].text.length) {
         // move to next line
         // if the line is the last line, current set to true to render cursor
-        buffer[lineIndex].current = lineIndex === lines.length - 1
-        linePosition = 0
-        lineIndex++
+        buffer[lineIndex].current = lineIndex === lines.length - 1;
+        linePosition = 0;
+        lineIndex++;
       } else {
         if (linePosition === 0 && !cmdTimer) {
           buffer.push({
             id: lineIndex,
-            text: '',
+            text: "",
             cmd: lines[lineIndex].cmd,
-            current: true
-          })
+            current: true,
+          });
         }
 
         // set text for the line as all the text before or at the position
         buffer[lineIndex].text = lines[lineIndex].text.substring(
           0,
-          linePosition
-        )
+          linePosition,
+        );
 
         // only move to next line position if no delay specified
         // or timer for current position has expired
         if (cmdTimer == null) {
-          const delay = lines[lineIndex].delay
+          const delay = lines[lineIndex].delay;
           if (!isNaN(delay)) {
+            // eslint-disable-next-line
             cmdTimer = setTimeout(() => {
-              clearTimeout(cmdTimer)
-              cmdTimer = null
-              linePosition++
-            }, delay)
+              clearTimeout(cmdTimer);
+              cmdTimer = null;
+              linePosition++;
+            }, delay);
           } else {
-            linePosition++
+            linePosition++;
           }
         }
       }
-      yield buffer
+      yield buffer;
     } else {
       // no more lines to process
       // signal finsihed to allow renderer to stop querying for new terminal content
-      return buffer
+      return buffer;
     }
   }
-}
+};
 
-export default terminalContent
+export default terminalContent;

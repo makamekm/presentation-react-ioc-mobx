@@ -23,7 +23,6 @@ export const $vertexShader = `
 
             float wrapEffect = 1.0 - sin(3.14159265358 / 2.0 * uTime / introTime);
 
-            // vertexPosition.z += wrapEffect;
             vertexPosition.x -= wrapEffect * (vertexPosition.x);
             vertexPosition.y -= wrapEffect * (vertexPosition.y);
 

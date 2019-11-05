@@ -1,8 +1,8 @@
-import Renderer from './Renderer'
-import Code from './Code'
+import Renderer from "./Renderer";
+import Code from "./Code";
 
 export {
-  Code
-}
+  Code,
+};
 
-export default Renderer
+export default Renderer;

@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React, { memo } from "react";
 
 const Panel = ({children, className, color, style}: {
@@ -8,9 +9,8 @@ const Panel = ({children, className, color, style}: {
 }) => {
   color = color || "tomato";
   return (
-    <div className={["panel", className].join(" ")} style={style}>
+    <div className={classNames("panel", className)} style={style}>
       {children}
-
       <style jsx>{`
         .panel {
           padding: 20px;

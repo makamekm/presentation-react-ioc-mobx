@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React, { memo } from "react";
 import Particles from "react-particles-js";
 
@@ -12,7 +13,7 @@ const Panel = ({children, fade, style, particles, logo, align, width}: {
 }) => (
   <div
     style={style}
-    className={"anime" + (fade ? " fade" : "") + (style && style.visibility === "hidden" ? " hidden" : "")}>
+    className={classNames("anime", {fade, hidden: style && style.visibility === "hidden"})}>
     {particles
       ? <div className="particles">
         <Particles

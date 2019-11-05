@@ -1,6 +1,6 @@
-import React from "react"
-import classNames from "classnames"
-import PropTypes from "prop-types"
+import React from "react";
+import classNames from "classnames";
+import PropTypes from "prop-types";
 
 const cursor = <span className="Terminal-cursor" />;
 const prompt = <span className="Terminal-prompt">$ </span>;
@@ -37,7 +37,7 @@ const getButtonStyle = (type) => {
     "Terminal-btn": true,
     "Terminal-btn-close": type === "close",
     "Terminal-btn-minimize": type === "minimize",
-    "Terminal-btn-maximize": type === "maximize"
+    "Terminal-btn-maximize": type === "maximize",
   });
 };
 
@@ -191,7 +191,7 @@ const Terminal = ({ children, white, height, code }) => {
         }
       `}</style>
     </div>
-  )
+  );
 };
 
 Terminal.propTypes = {

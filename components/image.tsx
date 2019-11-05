@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { Curtains } from "curtainsjs";
 import React from "react";
 
@@ -64,8 +65,6 @@ export default class Hero extends React.Component<{
 
     this.plane
       .onReady(() => {
-        // set a fov of 35 to exagerate perspective
-        // plane.setPerspective(35);
         this.ready = true;
         this.forceUpdate();
       })
@@ -77,7 +76,7 @@ export default class Hero extends React.Component<{
   public render() {
     return (
       <div>
-        <div className={"image-title" + (this.ready ? " show" : "")}>
+        <div className={classNames("image-title", {show: this.ready})}>
           <BigBadge>
             {this.props.title}
           </BigBadge>
@@ -91,7 +90,7 @@ export default class Hero extends React.Component<{
               src={this.props.src}
             />
           </div>
-          <div className={"canvas" + (this.ready ? " show" : "")} ref={(ref) => this.canvasContainer = ref} />
+          <div className={classNames("canvas", {show: this.ready})} ref={(ref) => this.canvasContainer = ref} />
         </div>
         <style jsx>{`
           .hero {

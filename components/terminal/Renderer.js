@@ -1,31 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Terminal from './Terminal'
-import termContent from './contentHandler'
+import React from "react"
+import PropTypes from "prop-types"
+import Terminal from "./Terminal"
+import termContent from "./contentHandler"
 
 class Renderer extends React.Component {
   constructor(props) {
-    super(props)
-    this.content = termContent(props.lines)
+    super(props);
+    this.content = termContent(props.lines);
     this.state = {
-      lines: this.content.next().value
-    }
+      lines: this.content.next().value,
+    };
   }
 
   componentDidMount() {
     this.timer = setInterval(() => {
-      const { value, done } = this.content.next()
+      const { value, done } = this.content.next();
       this.setState({
-        lines: value
-      })
+        lines: value,
+      });
       if (done) {
-        clearInterval(this.timer)
+        clearInterval(this.timer);
       }
-    }, this.props.interval)
+    }, this.props.interval);
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer)
+    clearInterval(this.timer);
   }
 
   render() {
@@ -35,18 +35,18 @@ class Renderer extends React.Component {
       >
         {this.state.lines}
       </Terminal>
-    )
+    );
   }
 }
 
 Renderer.defaultProps = {
   interval: 100,
-  lines: []
-}
+  lines: [],
+};
 
 Renderer.propTypes = {
   interval: PropTypes.number,
   lines: PropTypes.array,
-}
+};
 
-export default Renderer
+export default Renderer;

@@ -1,5 +1,5 @@
 
-export const spinner = ['⠋ ', '⠙ ', '⠹ ', '⠸ ', '⠼ ', '⠴ ', '⠦ ', '⠧ ', '⠇ ', '⠏ '];
+export const spinner = ["⠋ ", "⠙ ", "⠹ ", "⠸ ", "⠼ ", "⠴ ", "⠦ ", "⠧ ", "⠇ ", "⠏ "];
 
 export const loadingSpinner = ({
   onLoading,
@@ -15,12 +15,12 @@ export const loadingSpinner = ({
   delayUpdate?: number;
 } = {}) => (
   {
-    text: '✔ ' + (onLoad || 'Loaded'),
+    text: "✔ " + (onLoad || "Loaded"),
     cmd: false,
     repeat: true,
     repeatCount: repeatCount || 1,
-    frames: spinner.map((spinner) => ({
-      text: spinner + (onLoading || 'Loading'),
+    frames: spinner.map((char) => ({
+      text: char + (onLoading || "Loading"),
       delay: delayUpdate || 40,
     })),
     delay,

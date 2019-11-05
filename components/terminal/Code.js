@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Terminal from './Terminal'
+import React from "react";
+import PropTypes from "prop-types";
+import Terminal from "./Terminal";
 
 const Code = ({ children, ...rest }) => {
   return (
     <Terminal {...rest} code>
       {children}
     </Terminal>
-  )
-}
+  );
+};
 
 Code.propTypes = {
-  children: PropTypes.string
-}
+  children: PropTypes.string,
+};
 
-export default Code
+export default Code;
