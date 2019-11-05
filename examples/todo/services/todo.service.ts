@@ -50,7 +50,7 @@ export class TodoService implements IRootService {
     return this.data.todos.filter(todo => !todo.done).length;
   }
 
-  findTask(text) {
+  private findTask(text: string) {
     return this.data.todos.find(t => t.name === text);
   }
 

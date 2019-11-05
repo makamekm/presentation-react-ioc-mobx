@@ -16,7 +16,11 @@ const Component = () => {
   return (
     <>
       <div className="todo-list">{
-        transitions.map(({item, props, key}) => <animated.div key={key} style={props}><Todo todo={item}/></animated.div>)
+        transitions.map(({item, props, key}) =>
+          <animated.div key={key} style={props}>
+            <Todo todo={item}/>
+          </animated.div>
+        )
       }</div>
       <style jsx>{`
         .todo-list {

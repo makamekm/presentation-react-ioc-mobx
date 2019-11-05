@@ -652,14 +652,100 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 ---
 
+<Layout fade particles logo>
+
+<EffectImage src="structure.png" title="Project structure"/>
+
+</Layout>
+
+---
+
 <Layout fade logo width="100vw" align="left">
 
 <CodeSurfer>
 
-```tsx subtitle="Import React" file=./components/panels/panel.tsx
-```
+  ```tsx subtitle="TODO Service" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 7:11 subtitle="TODO Service [Todo interface]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 14:20 subtitle="TODO Service [Observable]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 24:47 subtitle="TODO Service [useHook Constructor]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 22,25:26 subtitle="TODO Service [Injection]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 49:51 subtitle="TODO Service [Computed]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 57:65 subtitle="TODO Service [Add todo - Action]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 67:72 subtitle="TODO Service [Toggle todo - Action]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx 74:78 subtitle="TODO Service [Remove todo - Action]" file=./examples/todo/services/todo.service.ts
+  ```
+
+  ```tsx subtitle="Index Page" file=./examples/todo/pages/index.tsx
+  ```
+
+  ```tsx subtitle="Todo Component" file=./examples/todo/components/todo-root.tsx
+  ```
+
+  ```tsx 9:11 subtitle="Todo Component" file=./examples/todo/components/todo-root.tsx
+  ```
+
+  ```tsx 7:26 subtitle="Input" file=./examples/todo/components/input.tsx
+  ```
+
+  ```tsx 7 subtitle="Input [Injecting]" file=./examples/todo/components/input.tsx
+  ```
+
+  ```tsx 8:10,24[19:30] subtitle="Input [OnChange]" file=./examples/todo/components/input.tsx
+  ```
+
+  ```tsx 11:16,25[20:28] subtitle="Input [OnAdd]" file=./examples/todo/components/input.tsx
+  ```
+
+  ```tsx 26 subtitle="Input [Value]" file=./examples/todo/components/input.tsx
+  ```
+
+  ```tsx 6,9:14,18:24 subtitle="List" file=./examples/todo/components/list.tsx
+  ```
+
+  ```tsx 9:15,19:25 subtitle="Item" file=./examples/todo/components/todo.tsx
+  ```
+
+  ```tsx 9:15 subtitle="Item [Hooks]" file=./examples/todo/components/todo.tsx
+  ```
+
+  ```tsx 19:25 subtitle="Item [Render]" file=./examples/todo/components/todo.tsx
+  ```
+
+  ```tsx 155 subtitle="Item [memo, observe]" file=./examples/todo/components/todo.tsx
+  ```
+
+  ```tsx 11:13 subtitle="Footer" file=./examples/todo/components/footer.tsx
+  ```
 
 </CodeSurfer>
+
+</Layout>
+
+---
+
+<Layout fade particles logo width="100vw">
+
+<div style={{minWidth: "600px"}}>
+  <TodoAppLayout>
+    <TodoAppPage/>
+  </TodoAppLayout>
+</div>
 
 </Layout>
 

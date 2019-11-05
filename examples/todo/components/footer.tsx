@@ -8,10 +8,12 @@ const Component = () => {
 
   return (
     <div className="footer">
-      <span className="todo-count"><strong>{todoService.left}</strong> item{todoService.left === 1 ? '' : 's'} left</span>
+      <span className="todo-count">
+        <strong>{todoService.left}</strong> item{todoService.left === 1 ? '' : 's'} left
+      </span>
       <style jsx>{`
         .footer {
-          padding: 10px 15px;
+          padding: 10px 15px 30px;
           height: 20px;
           text-align: center;
           font-size: 15px;
