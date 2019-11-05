@@ -147,12 +147,12 @@ import Terminal from './components/terminal/index';
 <Appear>
   <OnAppear fade>
     <div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
-      <BigPanel style={{display: 'inline-block'}} color="#4591EA">
-        > Architecture & Tools are very important
-      </BigPanel>
-      <BigPanel style={{display: 'inline-block', marginTop: "20px"}} color="#4591EA">
-        > Developers are Users
-      </BigPanel>
+      <div style={{fontWeight: 800}}>
+        1. Architecture & Tools are very important
+      </div>
+      <div style={{fontWeight: 800, marginTop: "20px"}}>
+        2. Developers are Users
+      </div>
     </div>
   </OnAppear>
 </Appear>
@@ -242,6 +242,12 @@ import Terminal from './components/terminal/index';
 ```
 
 ```tsx 8:28 file=./examples/style/button.tsx
+```
+
+```tsx 8:19 subtitle="Global styles" file=./examples/style/body.tsx
+```
+
+```tsx 8[12:17] file=./examples/style/body.tsx
 ```
 
 </CodeSurfer>
@@ -381,6 +387,16 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
   </Step>
 
+  <Step subtitle="Connection via HOC">
+
+  ```jsx 29 file=./examples/mobx-redux/mobx.jsx
+  ```
+
+  ```jsx 37:41 file=./examples/mobx-redux/redux.jsx
+  ```
+
+  </Step>
+
   <Step subtitle="Rendering">
 
   ```jsx 23:24 file=./examples/mobx-redux/mobx.jsx
@@ -427,6 +443,20 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   ```
 
 </CodeSurfer>
+
+</OnAppear>
+
+---
+
+<OnAppear fade particles logo>
+
+<div style={{display: 'flex', flexDirection: 'row', textAlign: 'left', width: "90%", justifyContent: "center"}}>
+
+<EffectImage src="mobx.png" title="Mobx"/>
+
+<EffectImage src="redux.png" title="Redux"/>
+
+</div>
 
 </OnAppear>
 
