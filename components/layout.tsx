@@ -12,7 +12,7 @@ const Panel = ({children, fade, style, particles, logo, align, width}: {
   align?: string;
   width?: string;
 }) => {
-  const { index, length, slug } = useDeck();
+  const { index, length } = useDeck();
 
   return (
     <div
@@ -54,7 +54,7 @@ const Panel = ({children, fade, style, particles, logo, align, width}: {
           }}/>
         </div> : null}
       {children}
-      <div className="page-indicator" style={{display: index === 0 ? 'none' : 'block'}}>{index} / {length}</div>
+      <div className="page-indicator" style={{display: index === 0 ? 'none' : 'block'}}>{index + 1} / {length}</div>
       {logo ? <img src="logo.png" className="logo"/> : null}
       <style global jsx>{`
         td, th {

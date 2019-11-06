@@ -27,10 +27,10 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo align="left">
 
 <VeryBigBadge>
-  Prototyping & React
+  Prototyping Quickly in React
 </VeryBigBadge>
 
-> How to make apps fast?
+> Using prototyping quickly in React
 
 <Formula>> __</Formula>
 
@@ -39,6 +39,10 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 ---
 
 <Layout fade particles logo>
+
+<h2>
+  Plan
+</h2>
 
 <BigBadge>
   Theory - Tools - Examples
@@ -51,21 +55,17 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo>
 
 <Panel>
-  How to make applications faster?
+  How to make applications more quickly
 </Panel>
 
-<Appear>
-  <Layout fade>
-    <div style={{textAlign: 'center'}}>
-      <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
-        Motivation & Comfort
-      </BigPanel>
-      <h3>
-        Let me prove...
-      </h3>
-    </div>
-  </Layout>
-</Appear>
+<div style={{textAlign: 'center'}}>
+  <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
+    Motivation
+  </BigPanel>
+  <h3>
+    So let me demonstrate...
+  </h3>
+</div>
 
 </Layout>
 
@@ -133,7 +133,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo>
 
-<EffectImage src="factors.png" title="7 motivation factors"/>
+<EffectImage src="factors.png" title="7 motivating factors and their values"/>
 
 </Layout>
 
@@ -142,21 +142,17 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo>
 
 <Panel>
-  Conclusion?
+  Conclusion
 </Panel>
 
-<Appear>
-  <Layout fade>
-    <div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
-      <div style={{fontWeight: 800}}>
-        1. Architecture & Tools are very important
-      </div>
-      <div style={{fontWeight: 800, marginTop: "20px"}}>
-        2. Developers are Users
-      </div>
-    </div>
-  </Layout>
-</Appear>
+<div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
+  <div style={{fontWeight: 800}}>
+    1. Project architecture and tools are crucial
+  </div>
+  <div style={{fontWeight: 800, marginTop: "20px"}}>
+    2. Developers are users
+  </div>
+</div>
 
 </Layout>
 
@@ -165,7 +161,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo>
 
 <h1>
-  How to make applications faster?
+  How to develop applications more quickly?
 </h1>
 
 </Layout>
@@ -177,18 +173,15 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <div style={{marginBottom: "20px"}}><b>GENERAL PROTOTYPING ISSUES</b></div>
 
 <Badge>
-  * Code refactoring *<br/>
-  <sub>- To be fixed with <b>TypeScript</b> -</sub>
+  1. Code refactoring
 </Badge>
 
 <Badge>
-  * Structure refactoring *<br/>
-  <sub>- To be fixed with <b>Flux Pattern</b> -</sub>
+  2. Structure refactoring
 </Badge>
 
 <Badge>
-  * Finding objects *<br/>
-  <sub>- To be fixed with <b>Flat Structure</b> -</sub>
+  3. Finding objects
 </Badge>
 
 </Layout>
@@ -206,13 +199,13 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo align="left">
 
 <Panel>
-  Architecture should be <span style={{color: "#2ECC71"}}>Findable</span>
+  Architecture should be - <span style={{color: "#2ECC71"}}>Findable</span>
 </Panel>
 
-- /shared-components (inputs, buttons, panels, etc.) <span style={{color: "#2ECC71"}}>Useful</span>
-- /components (application parts) <span style={{color: "#2ECC71"}}>Findable</span>
-- /pages (routing) <span style={{color: "#2ECC71"}}>Findable</span>
-- /services (dependency injection) <span style={{color: "#2ECC71"}}>Usable</span>
+- /shared-components (inputs, buttons, panels, etc.) - <span style={{color: "#2ECC71"}}>Useful</span>
+- /components (application parts) - <span style={{color: "#2ECC71"}}>Findable</span>
+- /pages (routing) - <span style={{color: "#2ECC71"}}>Findable</span>
+- /services (dependency injection) - <span style={{color: "#2ECC71"}}>Usable</span>
 
 </Layout>
 
@@ -221,7 +214,35 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo>
 
 <Panel>
-  Styles
+  TypeScript
+</Panel>
+
+Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> issues
+
+> Even "any" is better than nothing 
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<Panel>
+  Application State
+</Panel>
+
+Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful, Usable</span> issues
+
+> Flux came from ECS (Entity - Component - System Pattern)
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<Panel>
+  Styles (Style JSX library)
 </Panel>
 
 <div>
@@ -259,27 +280,22 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo>
 
-<Panel>
-  TypeScript only
-</Panel>
+<div style={{marginBottom: "20px"}}><b>GENERAL PROTOTYPING SOLUTIONS</b></div>
 
-Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> issues
+<Badge>
+  * Code refactoring *<br/>
+  <sub>- To be fixed with <b>TypeScript</b> -</sub>
+</Badge>
 
-> Even "any" is better than nothing 
+<Badge>
+  * Structure refactoring *<br/>
+  <sub>- To be fixed with <b>Flux Pattern</b> -</sub>
+</Badge>
 
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<Panel>
-  Application State
-</Panel>
-
-Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful, Usable</span> issues
-
-> Flux came from ECS (Entity - Component - System Pattern)
+<Badge>
+  * Finding objects *<br/>
+  <sub>- To be fixed with <b>Flat Structure</b> -</sub>
+</Badge>
 
 </Layout>
 
@@ -288,18 +304,14 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 <Layout fade particles logo>
 
 <Panel>
-  What is the formula?
+  The formula of speed
 </Panel>
 
-<Appear>
-  <Layout fade>
-    <div style={{textAlign: 'center'}}>
-      <BigPanel color="#2ECC71">
-        Gatsby + React + IOC + MOBX
-      </BigPanel>
-    </div>
-  </Layout>
-</Appear>
+<div style={{textAlign: 'center'}}>
+  <BigPanel color="#2ECC71">
+    Gatsby + React + IOC + MOBX
+  </BigPanel>
+</div>
 
 </Layout>
 
@@ -307,11 +319,11 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-| Base | Alternative |
-| --- | --- |
-| <BigPanel color="#2ECC71">React</BigPanel> | <BigPanel>Vue</BigPanel> |
-| <BigPanel color="#2ECC71">Gatsby</BigPanel> | <BigPanel>NextJS</BigPanel> |
-| <BigPanel color="#2ECC71">IOC + MobX</BigPanel> | <BigPanel>Redux Observable</BigPanel> |
+| Purpuse | Base | Alternative |
+| --- | --- | --- |
+| Engine | <BigPanel color="#2ECC71">React</BigPanel> | <BigPanel>Vue</BigPanel> |
+| Build | <BigPanel color="#2ECC71">Gatsby</BigPanel> | <BigPanel>NextJS</BigPanel> |
+| State | <BigPanel color="#2ECC71">IOC + MobX</BigPanel> | <BigPanel>Redux Observable</BigPanel> |
 
 </Layout>
 
@@ -319,7 +331,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-## Why not VueJS?
+## Why not VueJS
 
 <Badge>It doesn't support TypeScript</Badge>
 
@@ -329,10 +341,10 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-## Why not Redux?
+## Why not Redux
 
 <div>
-  <Badge>Let's Compare Ping Pong App:</Badge>
+  <Badge>Let's look at the ping pong app:</Badge>
   <sub>It sets "is pinging" in 1 second to true</sub>
 
   <div style={{marginTop: "50px", borderRadius: "10px", border: "1px solid rgba(255, 255, 255, 0.5)", padding: "10px"}}>
@@ -465,7 +477,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-<div style={{marginBottom: "20px"}}><b>Conclusion?</b></div>
+<div style={{marginBottom: "20px"}}><b>Conclusion</b></div>
 
 <div style={{display: 'flex', flexDirection: 'row', textAlign: 'left', width: "100%", justifyContent: "center"}}>
   <Badge>
@@ -481,7 +493,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
   </Badge>
 </div>
 
-> It's hard to build logic between multiple immutable objects
+> It's hard to make connections between multiple immutable objects
 
 </Layout>
 
@@ -489,9 +501,9 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-## 1/2 Questions?
+## Any questions?
 
-<Badge>Before going further...</Badge>
+<Badge>Before countuing...</Badge>
 
 </Layout>
 
@@ -499,7 +511,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-## Why not NextJS?
+## Why not NextJS
 
 <Badge>Let's compare their homepages...</Badge>
 
@@ -545,7 +557,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-**How to start with Gatsby?**
+**How to start with Gatsby**
 
 <div>
   <Terminal
@@ -596,7 +608,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-**How to deploy your app?**
+**How to deploy your app**
 
 <div>
   <Terminal
@@ -638,8 +650,8 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 <Layout fade particles logo width="100vw">
 
 <div>
-  <Badge>Let's make a todo app:</Badge>
-  <sub>We have to implement Input and List of TODOs</sub>
+  <Badge>Let's look at the to-do app:</Badge>
+  <sub>We have to implement an input field and a list of TODOs</sub>
 
   <div style={{marginTop: "50px"}}>
     <TodoAppLayout>
@@ -767,7 +779,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 
 <Layout fade particles logo>
 
-**Do you wanna make presentations like this?**
+**How to make presentations like this**
 
 <div>
   <Terminal
