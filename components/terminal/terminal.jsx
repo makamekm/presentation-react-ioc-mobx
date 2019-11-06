@@ -106,7 +106,7 @@ const Terminal = ({ children, white, height, code }) => {
         .Terminal-term {
           width: 100%;
           height: ${height}px;
-          min-width: 500px;
+          min-width: 700px;
         }
 
         .Terminal-term-code {
@@ -130,9 +130,9 @@ const Terminal = ({ children, white, height, code }) => {
         }
 
         .Terminal-console {
-          font-size: 12px;
+          font-size: 0.7em;
           font-family: Menlo, DejaVu Sans Mono, Consolas, Lucida Console, monospace;
-          line-height: 24px;
+          line-height: 2;
           color: rgb(255, 255, 255);
           margin: 0px 16px;
         }
@@ -184,9 +184,9 @@ const Terminal = ({ children, white, height, code }) => {
 
         .Terminal-code {
           margin: 0;
-          font-size: 12px;
+          font-size: 0.7em;
           font-family: Menlo, DejaVu Sans Mono, Consolas, Lucida Console, monospace;
-          line-height: 20px;
+          line-height: 1.5;
           white-space: pre-wrap;
         }
       `}</style>

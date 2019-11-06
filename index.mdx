@@ -40,13 +40,21 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo>
 
-<h2>
-  Plan
-</h2>
-
 <BigBadge>
   Theory - Tools - Examples
 </BigBadge>
+
+<h3>
+  # Plan
+</h3>
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+# Theory
 
 </Layout>
 
@@ -160,9 +168,17 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo>
 
-<h1>
+# Tools
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<h2>
   How to develop applications more quickly?
-</h1>
+</h2>
 
 </Layout>
 
@@ -219,7 +235,12 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> issues
 
-> Even "any" is better than nothing 
+> Even "any" is better than nothing
+
+<div style={{fontSize: "65%", marginTop: "20px", textAlign: "left"}}>
+  <b>1. TypeScript makes code easier to read and understand</b><br/>
+  2. TypeScript provides highly productive development tools for JavaScript IDEs and practices, like static checking
+</div>
 
 </Layout>
 
@@ -253,6 +274,22 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 </div>
 
 https://github.com/zeit/styled-jsx
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<EffectImage src="style-jsx-1.png" title="Body"/>
+
+<div style={{marginTop: "30px"}}>
+  <EffectImage src="style-jsx-2.png" title="Head"/>
+</div>
+
+<div style={{marginTop: "30px"}}>
+  # StyleJSX Magic
+</div>
 
 </Layout>
 
@@ -331,13 +368,21 @@ https://github.com/zeit/styled-jsx
 
 ---
 
-<Layout fade particles logo>
+<Layout fade particles logo align="left">
 
-## Why not VueJS
+<Badge>Why not VueJS</Badge>
 
-<Badge>The current vesrions (1.x, 2.x) don't support TypeScript</Badge>
-
-<sub>VueJS 3 will support it</sub>
+<div style={{fontSize: "65%", marginTop: "20px"}}>
+  <b>1. Current versions (1.x, 2.x) of VueJS do not support Typescript</b><br/>
+  2. Even with community libraries Vue does not support typing-by-default<br/>
+  3. Vue is more heavy than modern react<br/>
+  4. Vue is less popolar, look at trandings<br/>
+  5. React community is larger and there are thousands of libraries for React<br/>
+  6. React is USA Facebook, Vue is China Alibaba<br/>
+  7. Vue can be credible built with only NuxtJS, but there are multiple ways to build React with Babel<br/>
+  8. One of the best building systems Gatsby support Vue as experimental feature<br/>
+  9. Vue does not have any official testing tool. To test Vue you have to use Jest that is developed for React<br/>
+</div>
 
 </Layout>
 
@@ -485,23 +530,25 @@ https://github.com/zeit/styled-jsx
   Redux
 </Panel>
 
-1. Requires lots of code for simple things
-2. Does not support typing-by-default
+<div style={{fontSize: "80%", textAlign: "left"}}>
+  1. Requires lots of code for simple things<br/>
+  2. Does not support typing-by-default
+</div>
 
 <Panel>
   MobX
 </Panel>
 
-1. Simple, but requires additional libraries like ReactIOC
-2. But there are limitations with replacing arrays
+<div style={{fontSize: "80%", textAlign: "left"}}>
+  1. Simple, but requires additional libraries like <b>ReactIOC**</b><br/>
+  2. But there are limitations with replacing arrays
+</div>
 
 </Layout>
 
 ---
 
 <Layout fade particles logo>
-
-<div style={{marginBottom: "20px"}}><b>Conclusion</b></div>
 
 <div style={{display: 'flex', flexDirection: 'row', textAlign: 'left', width: "100%", justifyContent: "center"}}>
   <Badge>
@@ -537,7 +584,12 @@ https://github.com/zeit/styled-jsx
 
 ## Build systems
 
-<Badge>NextJS vs Gatsby</Badge>
+<Badge>NextJS vs GatsbyJS</Badge>
+
+<div style={{marginTop: "30px", textAlign: "left"}}>
+  https://www.gatsbyjs.org<br/>
+  https://nextjs.org
+</div>
 
 </Layout>
 
@@ -547,7 +599,7 @@ https://github.com/zeit/styled-jsx
 
 ## Why not NextJS
 
-<Badge>Let's compare their homepages...</Badge>
+<Badge>Let's compare the systems' homepages...</Badge>
 
 </Layout>
 
@@ -563,7 +615,7 @@ https://github.com/zeit/styled-jsx
 
 <Layout fade particles logo>
 
-<EffectImage src="gatsby-homepage.png" title="Gatsby Homepage"/>
+<EffectImage src="gatsby-homepage.png" title="GatsbyJS Homepage"/>
 
 </Layout>
 
@@ -572,10 +624,10 @@ https://github.com/zeit/styled-jsx
 <Layout fade particles logo align="left">
 
 <BigPanel color="#2ECC71">
-  + Gatsby static by default<br/>
-  + Gatsby can be used with any provider<br/>
-  + Gatsby is for large or small apps<br/>
-  + Gatsby has templates
+  + GatsbyJS static by default<br/>
+  + GatsbyJS can be used with any provider<br/>
+  + GatsbyJS is for large or small apps<br/>
+  + GatsbyJS has templates
 </BigPanel>
 
 <BigPanel style={{marginTop: "20px"}}>
@@ -595,7 +647,7 @@ https://github.com/zeit/styled-jsx
 
 <div>
   <Terminal
-    height={400}
+    height={500}
     lines={[
       {
         'text': 'npm install -g gatsby-cli',
@@ -603,7 +655,7 @@ https://github.com/zeit/styled-jsx
       },
       loadingSpinner({
         onLoading: 'Installing...',
-        onLoad: 'Gatsby has been installed!!',
+        onLoad: 'Gatsby has been installed!',
         }),
       {
         'text': 'gatsby new todo-app https://github.com/makamekm/gatsby-starter-typescript-ioc-mobx',
@@ -646,7 +698,7 @@ https://github.com/zeit/styled-jsx
 
 <div>
   <Terminal
-    height={400}
+    height={500}
     lines={[
       {
         'text': 'npm install -g now',
@@ -654,7 +706,7 @@ https://github.com/zeit/styled-jsx
       },
       loadingSpinner({
         onLoading: 'Installing...',
-        onLoad: 'NowJS has been installed!!',
+        onLoad: 'NowJS has been installed!',
         }),
       {
         'text': 'now',
@@ -675,7 +727,7 @@ https://github.com/zeit/styled-jsx
 
 <Layout fade particles logo>
 
-# Code Time!
+# Coding Time!
 
 </Layout>
 
@@ -826,7 +878,7 @@ https://github.com/zeit/styled-jsx
 
 <div>
   <Terminal
-    height={400}
+    height={500}
     lines={[
       {
         'text': 'npm install -g gatsby-cli',
@@ -834,7 +886,7 @@ https://github.com/zeit/styled-jsx
       },
       loadingSpinner({
         onLoading: 'Installing...',
-        onLoad: 'Gatsby has been installed!!',
+        onLoad: 'Gatsby has been installed!',
         }),
       {
         'text': 'gatsby new my-presentation https://github.com/makamekm/presentation-react-ioc-mobx',
