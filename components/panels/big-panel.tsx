@@ -13,6 +13,7 @@ const Panel = ({children, className, color, style}: {
       {children}
       <style jsx>{`
         .panel {
+          font-size: 80%;
           padding: 20px;
           background-color: ${color};
           color: white;

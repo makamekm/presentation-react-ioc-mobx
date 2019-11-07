@@ -30,7 +30,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
   Chosing Project Technology
 </VeryBigBadge>
 
-> For Chrome Extension
+> For developing a Chrome extension
 
 <Formula>> __</Formula>
 
@@ -41,7 +41,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo>
 
 <BigBadge>
-  Requirements - Canditates - Trendings
+  Requirements - Canditates - Detailes
 </BigBadge>
 
 <h3>
@@ -77,7 +77,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
     3. Testing
   </div>
   <div style={{fontWeight: 800, marginTop: "20px"}}>
-    4. Non a single page application
+    4. Not a single page application
   </div>
 </div>
 
@@ -126,15 +126,16 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
     <BigPanel color="#2ECC71">
       + All-in-one<br/>
       + RJ infrastructure<br/>
-      + GatsbyJS is customizable with plugins<br/>
-      + GatsbyJS has templates
+      + Bolt framework<br/>
+      + Incapsulated styles
     </BigPanel>
   </div>
   <div style={{marginTop: "20px"}}>
-    <BigPanel color="#2ECC71">
+    <BigPanel>
       - Does not work in "content_scripts"<br/>
       - Initialization speed<br/>
       - Huge bundle size<br/>
+      - Single page app build<br/>
       - Complex infrastructure
     </BigPanel>
   </div>
@@ -146,7 +147,66 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo>
 
-# Tools
+<Panel>
+  VueJS
+</Panel>
+
+<div style={{display: 'flex', fontSize: "90%", flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
+  <div style={{}}>
+    <BigPanel color="#2ECC71">
+      + VanilaJS<br/>
+      + RJ infrastructure<br/>
+      + Bolt framework<br/>
+      + Incapsulated styles
+    </BigPanel>
+  </div>
+  <div style={{marginTop: "20px"}}>
+    <BigPanel>
+      - Does not support TypeScript<br/>
+      - Community from China<br/>
+      - Middle bundle size<br/>
+      - Single page app build<br/>
+      - No testing frameworks
+    </BigPanel>
+  </div>
+</div>
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<Panel>
+  React
+</Panel>
+
+<div style={{display: 'flex', fontSize: "90%", flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
+  <div style={{}}>
+    <BigPanel color="#2ECC71">
+      + Easy to use<br/>
+      + Easy to test<br/>
+      + Light bundle size<br/>
+      + Lot's of specialists<br/>
+      + Largest community<br/>
+      + TypeScript
+    </BigPanel>
+  </div>
+  <div style={{marginTop: "20px"}}>
+    <BigPanel>
+      - Requires build framework<br/>
+      - Raw engine<br/>
+    </BigPanel>
+  </div>
+</div>
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+# Detailed VueJS vs React
 
 </Layout>
 
@@ -155,7 +215,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo align="left">
 
 <Panel>
-  React & Vue Architecture
+  React & VueJS Architecture
 </Panel>
 
 - /components (application components)
@@ -175,8 +235,8 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 > Even "any" is better than nothing
 
 <div style={{fontSize: "65%", marginTop: "20px", textAlign: "left"}}>
-  <b>1. TypeScript makes code easier to read and understand</b><br/>
-  2. TypeScript provides highly productive development tools for JavaScript IDEs and practices, like static checking
+  1. VueJS has lots of issues with TypeScript<br/>
+  2. React supports TypeScript & typing-by-default
 </div>
 
 </Layout>
@@ -186,12 +246,12 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo>
 
 <Panel>
-  Application State
+  Application State (Flux)
 </Panel>
 
-Vue & React don't have it, its better to use **Redux** or **MobX**
+Vue & React don't have Application State
 
-> Flux came from ECS (Entity - Component - System Pattern)
+[**Redux** or **MobX**]
 
 </Layout>
 
@@ -199,22 +259,23 @@ Vue & React don't have it, its better to use **Redux** or **MobX**
 
 <Layout fade particles logo>
 
-<div style={{marginBottom: "20px"}}><b>SOLUTIONS</b></div>
+<EffectImage src="trendings.png" title="USA Trendings"/>
 
-<Badge>
-  * Code refactoring *<br/>
-  <sub>- Fixed with <b>TypeScript</b> -</sub>
-</Badge>
+</Layout>
 
-<Badge>
-  * Structure refactoring *<br/>
-  <sub>- Fixed with <b>Flux Pattern</b> -</sub>
-</Badge>
+---
 
-<Badge>
-  * Finding objects *<br/>
-  <sub>- Fixed with <b>Flat Structure</b> -</sub>
-</Badge>
+<Layout fade particles logo>
+
+<EffectImage src="trendings-world.png" title="Global Trendings"/>
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<EffectImage src="size-compare.png" title="Bundle size"/>
 
 </Layout>
 
@@ -227,7 +288,7 @@ Vue & React don't have it, its better to use **Redux** or **MobX**
 </Panel>
 
 <div>
-  They are inside components in Vue & React, but they work only with build systems
+  Styles can be incapsulated inside components in Vue & React
   <br/>
   <sub>Vue does not allow to change styles programmatically</sub>
   <br/>
@@ -236,44 +297,6 @@ Vue & React don't have it, its better to use **Redux** or **MobX**
 </div>
 
 https://github.com/zeit/styled-jsx
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="style-jsx-1.png" title="Body"/>
-
-<div style={{marginTop: "30px"}}>
-  <EffectImage src="style-jsx-2.png" title="Head"/>
-</div>
-
-<div style={{marginTop: "30px"}}>
-  # styles in runtime
-</div>
-
-</Layout>
-
----
-
-<Layout fade logo width="100vw" align="left">
-
-<CodeSurfer>
-
-```tsx subtitle="Button with styles in it" file=./examples/style/button.tsx
-```
-
-```tsx 8:28 file=./examples/style/button.tsx
-```
-
-```tsx 8:19 subtitle="Global styles" file=./examples/style/body.tsx
-```
-
-```tsx 8[12:17] file=./examples/style/body.tsx
-```
-
-</CodeSurfer>
 
 </Layout>
 
@@ -326,123 +349,7 @@ https://github.com/zeit/styled-jsx
 
 <Layout fade particles logo>
 
-<EffectImage src="trendings.png" title="USA Trendings"/>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="trendings-world.png" title="Global Trendings"/>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="size-compare.png" title="Bundle size"/>
-
-</Layout>
-
----
-
-<Layout fade particles logo align="left">
-
-<Badge>Why not VueJS</Badge>
-
-<div style={{fontSize: "65%", marginTop: "20px"}}>
-  <b>1. Current versions (1.x, 2.x) of VueJS do not support Typescript</b><br/>
-  2. Even with community libraries Vue does not support typing-by-default<br/>
-  3. Vue is more heavy than modern react<br/>
-  4. Vue is less popolar, look at trandings<br/>
-  5. React community is larger and there are thousands of libraries for React<br/>
-  6. React is USA Facebook, Vue is China Alibaba<br/>
-  7. Vue can be easily built with only NuxtJS, but there are multiple ways to build React with Babel<br/>
-  8. One of the best building systems Gatsby support Vue as experimental feature<br/>
-  9. Vue does not have any official testing tool. To test Vue you have to use Jest that is developed for React<br/>
-</div>
-
-</Layout>
-
----
-
-<Layout fade particles logo align="left">
-
-<Badge>Why not Angular</Badge>
-
-<div style={{fontSize: "65%", marginTop: "20px"}}>
-  <b>1. Angular does not work in content_scripts</b><br/>
-  2. Angular is complex<br/>
-  3. Angular does not support typing-by-default in templates<br/>
-  4. Angular is more heavy than modern react<br/>
-  5. Angular is less popolar, look at trandings<br/>
-  6. React community is larger and there are thousands of libraries for React<br/>
-  7. React is USA Facebook, Angular is USA Google<br/>
-  8. Angular can be built with only Angular CLI, but there are multiple ways to build React with Babel<br/>
-</div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-## Any questions?
-
-<Badge>Before countuing...</Badge>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-## Build systems
-
-<Badge>GatsbyJS vs NuxtJS</Badge>
-
-<div style={{marginTop: "30px", textAlign: "left"}}>
-  https://www.gatsbyjs.org<br/>
-  https://nuxtjs.org/
-</div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="gatsby-homepage.png" title="GatsbyJS Homepage"/>
-
-</Layout>
-
----
-
-<Layout fade particles logo align="left">
-
-<BigPanel color="#2ECC71">
-  + GatsbyJS static by default<br/>
-  + GatsbyJS can be make prerendered html<br/>
-  + GatsbyJS is customizable with plugins<br/>
-  + GatsbyJS has templates
-</BigPanel>
-
-<BigPanel style={{marginTop: "20px"}}>
-  + NuxtJS isomorphic by default<br/>
-  + NuxtJS can be make prerendered html<br/>
-  - NuxtJS is not customizable with plugins<br/>
-  - NuxtJS hasn't templates
-</BigPanel>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-**How to start with Gatsby**
+**How to start development an extension**
 
 <div>
   <Terminal
@@ -457,7 +364,7 @@ https://github.com/zeit/styled-jsx
         onLoad: 'Gatsby has been installed!',
         }),
       {
-        'text': 'gatsby new todo-app https://github.com/makamekm/gatsby-starter-typescript-ioc-mobx',
+        'text': 'gatsby new todo-app https://github.com/makamekm/gatsby-starter-typescript-ioc-mobx-chrome-extension',
         'cmd': true,
       },
       loadingSpinner({
@@ -486,6 +393,22 @@ https://github.com/zeit/styled-jsx
     interval={20}
   />
 </div>
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+# Questions?
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<EffectImage src="yoda.jpg" title="Thank you!"/>
 
 </Layout>
 
@@ -616,21 +539,5 @@ https://github.com/zeit/styled-jsx
     <TodoAppPage/>
   </TodoAppLayout>
 </div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-# Final Questions?
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="yoda.jpg" title="Thank you!"/>
 
 </Layout>
