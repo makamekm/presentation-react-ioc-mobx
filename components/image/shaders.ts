@@ -31,12 +31,13 @@ export const $vertexShader = `
             vTextureCoord = aTextureCoord;
             vVertexPosition = vertexPosition;
         } else {
-            float k = sin(time / 40.0);
+            float timer = 40.0;
+            float spareTime = mod(time, timer * 20.0);
+            float k = sin(spareTime / timer);
             if (k < 0.0) {
                 k = 0.0;
             }
-            k = sin(time / 20.0) * k;
-            if (k < 0.0) {
+            if (spareTime > timer * 4.0) {
                 k = 0.0;
             }
             vec3 vertexPosition = aVertexPosition;

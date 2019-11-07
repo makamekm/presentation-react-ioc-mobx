@@ -60,22 +60,6 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo>
 
-<Panel>
-  How to make applications more quickly
-</Panel>
-
-<div style={{textAlign: 'center'}}>
-  <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
-    Tools (Language, Build Systems, IDE)
-  </BigPanel>
-</div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
 <EffectImage src="circle.png" title="Development circle"/>
 
 </Layout>
@@ -85,7 +69,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo>
 
 <Panel>
-  Conclusion
+  VueJS is for prototyping
 </Panel>
 
 <div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
@@ -96,7 +80,10 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
     2. TypeScript is the best solution, but it requires a configured environment
   </div>
   <div style={{fontWeight: 800, marginTop: "20px"}}>
-    3. Experimantal packages are good for prototying, but not for production solutions
+    3. Vue allows to write code without compiling
+  </div>
+  <div style={{fontWeight: 800, marginTop: "20px"}}>
+    4. Vue has more simple template syntax than Angular
   </div>
 </div>
 
@@ -118,7 +105,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
   React & Vue Architecture
 </Panel>
 
-- /components (application parts)
+- /components (application components)
 - /pages (routing)
 - /services or /stores (state)
 
@@ -149,9 +136,32 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
   Application State
 </Panel>
 
-Vue & React don't have it, its better to use Redux or MobX
+Vue & React don't have it, its better to use **Redux** or **MobX**
 
 > Flux came from ECS (Entity - Component - System Pattern)
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<div style={{marginBottom: "20px"}}><b>SOLUTIONS</b></div>
+
+<Badge>
+  * Code refactoring *<br/>
+  <sub>- Fixed with <b>TypeScript</b> -</sub>
+</Badge>
+
+<Badge>
+  * Structure refactoring *<br/>
+  <sub>- Fixed with <b>Flux Pattern</b> -</sub>
+</Badge>
+
+<Badge>
+  * Finding objects *<br/>
+  <sub>- Fixed with <b>Flat Structure</b> -</sub>
+</Badge>
 
 </Layout>
 
@@ -165,6 +175,8 @@ Vue & React don't have it, its better to use Redux or MobX
 
 <div>
   They are inside components in Vue & React, but they work only with build systems
+  <br/>
+  <sub>Vue does not allow to change styles programmatically</sub>
   <br/>
   <br/>
   <Button>I am a button!</Button>
@@ -208,30 +220,35 @@ https://github.com/zeit/styled-jsx
 ```tsx 8[12:17] file=./examples/style/body.tsx
 ```
 
+```html subtitle="VueJS"
+<template>
+  <div class="button"></div>
+</template>
+
+<style scoped>
+  .button {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    color: #333;
+    background-color: rgba(150, 220, 220, 1);
+    border-radius: 5px;
+    transition: background-color 0.1s, color 0.1s, opacity 0.1s;
+  }
+
+  .button:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .button:active {
+    opacity: 0.6;
+  }
+</style>
+```
+
 </CodeSurfer>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<div style={{marginBottom: "20px"}}><b>SOLUTIONS</b></div>
-
-<Badge>
-  * Code refactoring *<br/>
-  <sub>- Fixed with <b>TypeScript</b> -</sub>
-</Badge>
-
-<Badge>
-  * Structure refactoring *<br/>
-  <sub>- Fixed with <b>Flux Pattern</b> -</sub>
-</Badge>
-
-<Badge>
-  * Finding objects *<br/>
-  <sub>- Fixed with <b>Flat Structure</b> -</sub>
-</Badge>
 
 </Layout>
 
@@ -256,7 +273,7 @@ https://github.com/zeit/styled-jsx
   4. Vue is less popolar, look at trandings<br/>
   5. React community is larger and there are thousands of libraries for React<br/>
   6. React is USA Facebook, Vue is China Alibaba<br/>
-  7. Vue can be credible built with only NuxtJS, but there are multiple ways to build React with Babel<br/>
+  7. Vue can be easily built with only NuxtJS, but there are multiple ways to build React with Babel<br/>
   8. One of the best building systems Gatsby support Vue as experimental feature<br/>
   9. Vue does not have any official testing tool. To test Vue you have to use Jest that is developed for React<br/>
 </div>
@@ -379,39 +396,6 @@ https://github.com/zeit/styled-jsx
       {
         'text': '~~~ You are ready to go! ~~~',
       },
-    ]}
-    interval={20}
-  />
-</div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-**How to deploy your app**
-
-<div>
-  <Terminal
-    height={500}
-    lines={[
-      {
-        'text': 'npm install -g now',
-        'cmd': true,
-      },
-      loadingSpinner({
-        onLoading: 'Installing...',
-        onLoad: 'NowJS has been installed!',
-        }),
-      {
-        'text': 'now',
-        'cmd': true,
-      },
-      loadingSpinner({
-        onLoading: 'Deploying...',
-        onLoad: 'Your app is ready at http://todoapp.me.zeit.com/',
-      }),
     ]}
     interval={20}
   />
