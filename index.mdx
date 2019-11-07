@@ -27,10 +27,8 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Layout fade particles logo align="left">
 
 <VeryBigBadge>
-  Prototyping Quickly in React
+  React vs Vue
 </VeryBigBadge>
-
-> Using prototyping quickly in React
 
 <Formula>> __</Formula>
 
@@ -68,11 +66,8 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <div style={{textAlign: 'center'}}>
   <BigPanel style={{display: 'inline-block'}} color="#2ECC71">
-    Motivation
+    Tools (Language, Build Systems, IDE)
   </BigPanel>
-  <h3>
-    So let me demonstrate...
-  </h3>
 </div>
 
 </Layout>
@@ -89,76 +84,19 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 <Layout fade particles logo>
 
-<h1>
-  What is project speed?
-</h1>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="friction.png" title="Neuton explanation"/>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<BigBadge>
-  Project Speed
-</BigBadge>
-
-<Formula style={{marginTop: "20px"}}>
-  V = (Ideas) / (Delta t) - underset(Friction)(F)
-</Formula>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="brain.jpg" title="BRAIN"/>
-
-</Layout>
-
----
-
-<Layout fade particles logo style={{textAlign: "center"}}>
-
-<BigBadge>
-  DELAY
-</BigBadge>
-
-<BigPanel color="#2ECC71" style={{marginTop: "10px"}}>Instincts (N ms)</BigPanel> + <BigPanel color="#4591EA">Emotions (10 * N)</BigPanel> + <BigPanel>Reason (100 * N)</BigPanel>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="factors.png" title="7 motivating factors and their values"/>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
 <Panel>
   Conclusion
 </Panel>
 
 <div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
   <div style={{fontWeight: 800}}>
-    1. Project architecture and tools are crucial
+    1. If you don't have configured environment it's better to use Vanilla JS
   </div>
   <div style={{fontWeight: 800, marginTop: "20px"}}>
-    2. Developers are users
+    2. TypeScript is the best solution, but it requires a configured environment
+  </div>
+  <div style={{fontWeight: 800, marginTop: "20px"}}>
+    3. Experimantal packages are good for prototying, but not for production solutions
   </div>
 </div>
 
@@ -174,54 +112,15 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 
 ---
 
-<Layout fade particles logo>
-
-<h2>
-  How to develop applications more quickly?
-</h2>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<div style={{marginBottom: "20px"}}><b>GENERAL PROTOTYPING ISSUES</b></div>
-
-<Badge>
-  1. Code refactoring
-</Badge>
-
-<Badge>
-  2. Structure refactoring
-</Badge>
-
-<Badge>
-  3. Finding objects
-</Badge>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<b>Let's make some conclusions...</b>
-
-</Layout>
-
----
-
 <Layout fade particles logo align="left">
 
 <Panel>
-  Architecture should be - <span style={{color: "#2ECC71"}}>Findable</span>
+  React & Vue Architecture
 </Panel>
 
-- /shared-components (inputs, buttons, panels, etc.) - <span style={{color: "#2ECC71"}}>Useful</span>
-- /components (application parts) - <span style={{color: "#2ECC71"}}>Findable</span>
-- /pages (routing) - <span style={{color: "#2ECC71"}}>Findable</span>
-- /services (dependency injection) - <span style={{color: "#2ECC71"}}>Usable</span>
+- /components (application parts)
+- /pages (routing)
+- /services or /stores (state)
 
 </Layout>
 
@@ -232,8 +131,6 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
 <Panel>
   TypeScript
 </Panel>
-
-Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> issues
 
 > Even "any" is better than nothing
 
@@ -252,7 +149,7 @@ Strict types solve <span style={{color: "#2ECC71"}}>Findable, Credible</span> is
   Application State
 </Panel>
 
-Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful, Usable</span> issues
+Vue & React don't have it, its better to use Redux or MobX
 
 > Flux came from ECS (Entity - Component - System Pattern)
 
@@ -267,7 +164,7 @@ Global state solves <span style={{color: "#2ECC71"}}>Findable, Credible, Useful,
 </Panel>
 
 <div>
-  Should be <b>incapsulated</b> inside components <span style={{color: "#2ECC71"}}>Findable</span>
+  They are inside components in Vue & React, but they work only with build systems
   <br/>
   <br/>
   <Button>I am a button!</Button>
@@ -288,7 +185,7 @@ https://github.com/zeit/styled-jsx
 </div>
 
 <div style={{marginTop: "30px"}}>
-  # StyleJSX Magic
+  # styles in runtime
 </div>
 
 </Layout>
@@ -319,21 +216,21 @@ https://github.com/zeit/styled-jsx
 
 <Layout fade particles logo>
 
-<div style={{marginBottom: "20px"}}><b>GENERAL PROTOTYPING SOLUTIONS</b></div>
+<div style={{marginBottom: "20px"}}><b>SOLUTIONS</b></div>
 
 <Badge>
   * Code refactoring *<br/>
-  <sub>- To be fixed with <b>TypeScript</b> -</sub>
+  <sub>- Fixed with <b>TypeScript</b> -</sub>
 </Badge>
 
 <Badge>
   * Structure refactoring *<br/>
-  <sub>- To be fixed with <b>Flux Pattern</b> -</sub>
+  <sub>- Fixed with <b>Flux Pattern</b> -</sub>
 </Badge>
 
 <Badge>
   * Finding objects *<br/>
-  <sub>- To be fixed with <b>Flat Structure</b> -</sub>
+  <sub>- Fixed with <b>Flat Structure</b> -</sub>
 </Badge>
 
 </Layout>
@@ -342,27 +239,7 @@ https://github.com/zeit/styled-jsx
 
 <Layout fade particles logo>
 
-<Panel>
-  The formula of speed
-</Panel>
-
-<div style={{textAlign: 'center'}}>
-  <BigPanel color="#2ECC71">
-    Gatsby + React + IOC + MOBX
-  </BigPanel>
-</div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-| Purpuse | Base | Alternative |
-| --- | --- | --- |
-| Engine | <BigPanel color="#2ECC71">React</BigPanel> | <BigPanel>Vue</BigPanel> |
-| Build | <BigPanel color="#2ECC71">Gatsby</BigPanel> | <BigPanel>NextJS</BigPanel> |
-| State | <BigPanel color="#2ECC71">IOC + MobX</BigPanel> | <BigPanel>Redux Observable</BigPanel> |
+<EffectImage src="trendings.png" title="Trendings"/>
 
 </Layout>
 
@@ -388,183 +265,20 @@ https://github.com/zeit/styled-jsx
 
 ---
 
-<Layout fade particles logo>
-
-## Why not Redux
-
-<div>
-  <Badge>Let's look at the ping pong app:</Badge>
-  <sub>It sets "is pinging" in 1 second to true</sub>
-
-  <div style={{marginTop: "50px", borderRadius: "10px", border: "1px solid rgba(255, 255, 255, 0.5)", padding: "10px"}}>
-    <MobxPingPong/>
-  </div>
-</div>
-
-</Layout>
-
----
-
-<Layout fade logo width="100vw" align="left">
-
-<CodeSurferColumns>
-
-  <Step>
-
-  ```jsx subtitle="Mobx" file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx subtitle="Redux" file=./examples/mobx-redux/redux.jsx
-  ```
-
-  </Step>
-
-  <Step subtitle="Storage">
-
-  ```jsx 1:12 file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 1:24 file=./examples/mobx-redux/redux.jsx
-  ```
-
-  </Step>
-
-  <Step subtitle="Component">
-
-  ```jsx 14:29 file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 26:40 file=./examples/mobx-redux/redux.jsx
-  ```
-
-  </Step>
-
-  <Step subtitle="Injection">
-
-  ```jsx 20 file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 30,37:40 file=./examples/mobx-redux/redux.jsx
-  ```
-
-  </Step>
-
-  <Step subtitle="Connection via HOC">
-
-  ```jsx 29 file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 37:41 file=./examples/mobx-redux/redux.jsx
-  ```
-
-  </Step>
-
-  <Step subtitle="Rendering">
-
-  ```jsx 23:24 file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 32:33 file=./examples/mobx-redux/redux.jsx
-  ```
-
-  </Step>
-
-  <Step subtitle="Provider">
-
-  ```jsx 31:37,42:44 file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 42:53,57:59 file=./examples/mobx-redux/redux.jsx
-  ```
-
-  </Step>
-
-</CodeSurferColumns>
-
-</Layout>
-
----
-
-<Layout fade logo width="100vw" align="left">
-
-<CodeSurfer>
-
-  ```jsx 5:12 subtitle="React IOC" file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 16:29 subtitle="Mobx" file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 23[25:49] subtitle="Observable Variable" file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 24[24:43] subtitle="Observable Action" file=./examples/mobx-redux/mobx.jsx
-  ```
-
-  ```jsx 29 subtitle="React Mobx Observer" file=./examples/mobx-redux/mobx.jsx
-  ```
-
-</CodeSurfer>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<div style={{display: 'flex', flexDirection: 'row', textAlign: 'left', width: "90%", justifyContent: "center"}}>
-
-<EffectImage src="mobx.png" title="Mobx"/>
-
-<EffectImage src="redux.png" title="Redux"/>
-
-</div>
-
-</Layout>
-
----
-
 <Layout fade particles logo align="left">
 
-<Panel>
-  Redux
-</Panel>
+<Badge>Why not Angular</Badge>
 
-<div style={{fontSize: "80%", textAlign: "left"}}>
-  1. Requires lots of code for simple things<br/>
-  2. Does not support typing-by-default
+<div style={{fontSize: "65%", marginTop: "20px"}}>
+  <b>1. Angular does not work in content_scripts</b><br/>
+  2. Angular is complex<br/>
+  3. Angular does not support typing-by-default in templates<br/>
+  4. Angular is more heavy than modern react<br/>
+  5. Angular is less popolar, look at trandings<br/>
+  6. React community is larger and there are thousands of libraries for React<br/>
+  7. React is USA Facebook, Angular is USA Google<br/>
+  8. Angular can be built with only Angular CLI, but there are multiple ways to build React with Babel<br/>
 </div>
-
-<Panel>
-  MobX
-</Panel>
-
-<div style={{fontSize: "80%", textAlign: "left"}}>
-  1. Simple, but requires additional libraries like <b>ReactIOC**</b><br/>
-  2. Limitations with replacing arrays
-</div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<div style={{display: 'flex', flexDirection: 'row', textAlign: 'left', width: "100%", justifyContent: "center"}}>
-  <Badge>
-    Mobx<br/>
-    <BigPanel style={{marginTop: '20px'}} color="#2ECC71"><b>Simple</b></BigPanel>
-    <BigPanel style={{marginTop: '20px'}} color="#2ECC71"><b>Mutable</b></BigPanel>
-  </Badge>
-
-  <Badge>
-    Redux<br/>
-    <BigPanel style={{marginTop: '20px'}}><b>Complex</b></BigPanel>
-    <BigPanel style={{marginTop: '20px'}}><b>Immutable</b></BigPanel>
-  </Badge>
-</div>
-
-> It's hard to make connections between multiple immutable objects
 
 </Layout>
 
@@ -584,30 +298,12 @@ https://github.com/zeit/styled-jsx
 
 ## Build systems
 
-<Badge>NextJS vs GatsbyJS</Badge>
+<Badge>GatsbyJS vs NuxtJS</Badge>
 
 <div style={{marginTop: "30px", textAlign: "left"}}>
   https://www.gatsbyjs.org<br/>
-  https://nextjs.org
+  https://nuxtjs.org/
 </div>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-## Why not NextJS
-
-<Badge>Let's compare the systems' homepages...</Badge>
-
-</Layout>
-
----
-
-<Layout fade particles logo>
-
-<EffectImage src="nextjs-homepage.png" title="NextJS Homepage"/>
 
 </Layout>
 
@@ -625,16 +321,16 @@ https://github.com/zeit/styled-jsx
 
 <BigPanel color="#2ECC71">
   + GatsbyJS static by default<br/>
-  + GatsbyJS can be used with any provider<br/>
-  + GatsbyJS is for large or small apps<br/>
+  + GatsbyJS can be make prerendered html<br/>
+  + GatsbyJS is customizable with plugins<br/>
   + GatsbyJS has templates
 </BigPanel>
 
 <BigPanel style={{marginTop: "20px"}}>
-  + NextJS isomorphic by default<br/>
-  - NextJS can be used only for Zeit provider<br/>
-  - NextJS is for small apps<br/>
-  - NextJS hasn't templates
+  + NuxtJS isomorphic by default<br/>
+  + NuxtJS can be make prerendered html<br/>
+  - NuxtJS is not customizable with plugins<br/>
+  - NuxtJS hasn't templates
 </BigPanel>
 
 </Layout>
@@ -866,57 +562,5 @@ https://github.com/zeit/styled-jsx
 <Layout fade particles logo>
 
 <EffectImage src="yoda.jpg" title="Thank you!"/>
-
-</Layout>
-
-
----
-
-<Layout fade particles logo>
-
-**How to make presentations like this**
-
-<div>
-  <Terminal
-    height={500}
-    lines={[
-      {
-        'text': 'npm install -g gatsby-cli',
-        'cmd': true,
-      },
-      loadingSpinner({
-        onLoading: 'Installing...',
-        onLoad: 'Gatsby has been installed!',
-        }),
-      {
-        'text': 'gatsby new my-presentation https://github.com/makamekm/presentation-react-ioc-mobx',
-        'cmd': true,
-      },
-      loadingSpinner({
-        onLoading: 'Initializing...',
-        onLoad: 'Your app has been initialized!',
-      }),
-      {
-        'text': 'cd my-presentation',
-        'cmd': true,
-      },
-      {
-        'text': 'npm run start',
-        'cmd': true,
-      },
-      loadingSpinner({
-        onLoading: 'Compiling...',
-        onLoad: 'Your app is ready at http://localhost:8000/',
-      }),
-      {
-        'text': '',
-      },
-      {
-        'text': '~~~ You are ready to go at index.mdx! ~~~',
-      },
-    ]}
-    interval={20}
-  />
-</div>
 
 </Layout>
