@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  presentation-react-ioc-mobx
+  presentation-react-vs-vue
 </h1>
 
 > A starter kit for TypeScript-based Gatsby projects with sensible defaults.
@@ -43,7 +43,7 @@ This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) presentation wr
     Use the `gatsby-cli` to create a new site and install its dependencies.
 
     ```bash
-    gatsby new project-name https://github.com/makamekm/presentation-react-ioc-mobx
+    gatsby new project-name https://github.com/makamekm/presentation-react-vs-vue
     ```
 
 2.  **Start up development server.**
@@ -93,4 +93,4 @@ Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site ge
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/makamekm/presentation-react-ioc-mobx)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/makamekm/presentation-react-vs-vue)
