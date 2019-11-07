@@ -72,7 +72,7 @@ import TodoAppPage from "./examples/todo/pages/index.tsx";
   VueJS is for prototyping
 </Panel>
 
-<div style={{display: 'flex', flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
+<div style={{display: 'flex', fontSize: "90%", flexDirection: 'column', textAlign: 'left', width: "100%", justifyContent: "center"}}>
   <div style={{fontWeight: 800}}>
     1. If you don't have configured environment it's better to use Vanilla JS
   </div>
@@ -220,35 +220,52 @@ https://github.com/zeit/styled-jsx
 ```tsx 8[12:17] file=./examples/style/body.tsx
 ```
 
-```html subtitle="VueJS"
-<template>
-  <div class="button"></div>
-</template>
-
-<style scoped>
-  .button {
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-    padding: 10px;
-    color: #333;
-    background-color: rgba(150, 220, 220, 1);
-    border-radius: 5px;
-    transition: background-color 0.1s, color 0.1s, opacity 0.1s;
-  }
-
-  .button:hover {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  .button:active {
-    opacity: 0.6;
-  }
-</style>
-```
-
 </CodeSurfer>
+
+</Layout>
+
+---
+
+<Layout fade logo width="100vw" align="left">
+
+<CodeSurferColumns>
+
+  <Step>
+
+  ```jsx subtitle="React" file=./examples/style/button.tsx
+  ```
+
+  ```html subtitle="VueJS"
+  <template>
+    <div class="button"></div>
+  </template>
+
+  <style scoped>
+    .button {
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px;
+      color: #333;
+      background-color: rgba(150, 220, 220, 1);
+      border-radius: 5px;
+      transition: background-color 0.1s, color 0.1s, opacity 0.1s;
+    }
+
+    .button:hover {
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .button:active {
+      opacity: 0.6;
+    }
+  </style>
+  ```
+
+  </Step>
+
+</CodeSurferColumns>
 
 </Layout>
 
@@ -256,7 +273,15 @@ https://github.com/zeit/styled-jsx
 
 <Layout fade particles logo>
 
-<EffectImage src="trendings.png" title="Trendings"/>
+<EffectImage src="trendings.png" title="USA Trendings"/>
+
+</Layout>
+
+---
+
+<Layout fade particles logo>
+
+<EffectImage src="trendings-world.png" title="Global Trendings"/>
 
 </Layout>
 
