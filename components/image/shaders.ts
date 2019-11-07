@@ -31,8 +31,8 @@ export const $vertexShader = `
             vTextureCoord = aTextureCoord;
             vVertexPosition = vertexPosition;
         } else {
-            float timer = 40.0;
-            float spareTime = mod(time, timer * 20.0);
+            float timer = 20.0;
+            float spareTime = mod(time, timer * 40.0);
             float k = sin(spareTime / timer);
             if (k < 0.0) {
                 k = 0.0;
